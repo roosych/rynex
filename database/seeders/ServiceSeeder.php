@@ -13,12 +13,12 @@ class ServiceSeeder extends Seeder
             [
                 'title'            => 'Refrigerator Repair',
                 'slug'             => 'refrigerator-repair',
-                'meta_description' => 'Professional refrigerator repair in Dallas, TX. Swift Fix technicians diagnose and fix all fridge brands same day — backed by a 90-day warranty.',
+                'meta_description' => 'Professional refrigerator repair in Chicago, IL. Rynex Fix technicians diagnose and fix all fridge brands same day — backed by a 90-day warranty.',
                 'excerpt'          => 'Compressor issues, temperature problems, ice maker faults — we fix all major fridge brands fast.',
                 'image'            => '/template/images/template/careref.jpg',
                 'sort_order'       => 1,
                 'content'          => '
-                <p class="wow fadeInUp">Your refrigerator runs every single day — and when it stops working properly, the impact is immediate. At Swift Fix, our certified technicians diagnose and repair refrigerators from all major brands, including Samsung, LG, Whirlpool, GE, Maytag, Frigidaire, and more. Most repairs are completed in a single visit.</p>
+                <p class="wow fadeInUp">Your refrigerator runs every single day — and when it stops working properly, the impact is immediate. At Rynex Fix, our certified technicians diagnose and repair refrigerators from all major brands, including Samsung, LG, Whirlpool, GE, Maytag, Frigidaire, and more. Most repairs are completed in a single visit.</p>
                 <p class="wow fadeInUp" data-wow-delay="0.2s">We carry a full inventory of OEM-compatible parts in our service vehicles, which means we can fix most issues on the spot without waiting for parts to ship. Every refrigerator repair is backed by our 90-day warranty.</p>
                 <ul class="wow fadeInUp" data-wow-delay="0.4s">
                     <li>Compressor and cooling system failures</li>
@@ -36,7 +36,7 @@ class ServiceSeeder extends Seeder
             [
                 'title'            => 'Washer & Dryer Repair',
                 'slug'             => 'washer-dryer-repair',
-                'meta_description' => 'Washer and dryer repair in Dallas, TX. Swift Fix technicians fix all brands same day — backed by a 90-day warranty.',
+                'meta_description' => 'Washer and dryer repair in Chicago, IL. Rynex Fix technicians fix all brands same day — backed by a 90-day warranty.',
                 'excerpt'          => 'Won\'t spin, won\'t drain, or won\'t heat? Same-day repair for all brands.',
                 'image'            => '/template/images/template/carewash.jpg',
                 'sort_order'       => 2,
@@ -54,7 +54,7 @@ class ServiceSeeder extends Seeder
             [
                 'title'            => 'Dishwasher Repair',
                 'slug'             => 'dishwasher-repair',
-                'meta_description' => 'Dishwasher repair in Dallas, TX. Swift Fix fixes leaks, clogs, and electrical issues same day — backed by a 90-day warranty.',
+                'meta_description' => 'Dishwasher repair in Chicago, IL. Rynex Fix fixes leaks, clogs, and electrical issues same day — backed by a 90-day warranty.',
                 'excerpt'          => 'Leaking, not cleaning, or won\'t start — we get your dishwasher back to work quickly.',
                 'image'            => '/template/images/template/caredish.jpg',
                 'sort_order'       => 3,
@@ -72,7 +72,7 @@ class ServiceSeeder extends Seeder
             [
                 'title'            => 'Oven & Stove Repair',
                 'slug'             => 'oven-stove-repair',
-                'meta_description' => 'Oven and stove repair in Dallas, TX. Gas and electric — Swift Fix fixes all makes and models same day.',
+                'meta_description' => 'Oven and stove repair in Chicago, IL. Gas and electric — Rynex Fix fixes all makes and models same day.',
                 'excerpt'          => 'Burners not igniting, uneven heating, broken controls — gas and electric covered.',
                 'image'            => '/template/images/template/service-maintenance-worker-repairing.jpg',
                 'sort_order'       => 4,
@@ -90,7 +90,7 @@ class ServiceSeeder extends Seeder
             [
                 'title'            => 'AC / HVAC Repair',
                 'slug'             => 'ac-hvac-repair',
-                'meta_description' => 'AC and HVAC repair in Dallas, TX. Swift Fix keeps your home comfortable — same-day service, 90-day warranty.',
+                'meta_description' => 'AC and HVAC repair in Chicago, IL. Rynex Fix keeps your home comfortable — same-day service, 90-day warranty.',
                 'excerpt'          => 'Cooling issues, strange noises, or inefficient performance — year-round comfort service.',
                 'image'            => '/template/images/template/XXXL.webp',
                 'sort_order'       => 5,
@@ -108,12 +108,12 @@ class ServiceSeeder extends Seeder
             [
                 'title'            => 'Same-Day Emergency Repair',
                 'slug'             => 'same-day-emergency-repair',
-                'meta_description' => 'Same-day emergency appliance repair in Dallas, TX. Swift Fix responds fast — 90-day warranty on all repairs.',
-                'excerpt'          => 'Appliance down at the worst time? We offer same-day emergency service across the Dallas area.',
+                'meta_description' => 'Same-day emergency appliance repair in Chicago, IL. Rynex Fix responds fast — 90-day warranty on all repairs.',
+                'excerpt'          => 'Appliance down at the worst time? We offer same-day emergency service across the Chicago area.',
                 'image'            => '/template/images/template/athome.jpg',
                 'sort_order'       => 6,
                 'content'          => '
-                <p class="wow fadeInUp">Appliance down at the worst time? We offer same-day emergency service across the Dallas area. Call us in the morning and we\'ll be there before dinner.</p>
+                <p class="wow fadeInUp">Appliance down at the worst time? We offer same-day emergency service across the Chicago area. Call us in the morning and we\'ll be there before dinner.</p>
                 <ul class="wow fadeInUp" data-wow-delay="0.2s">
                     <li>Same-day scheduling available most days</li>
                     <li>All major home appliances covered</li>
@@ -125,7 +125,7 @@ class ServiceSeeder extends Seeder
         ];
 
         foreach ($services as $data) {
-            Service::create($data);
+            Service::updateOrCreate(['slug' => $data['slug']], $data);
         }
     }
 }

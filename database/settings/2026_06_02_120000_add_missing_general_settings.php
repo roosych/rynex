@@ -13,9 +13,9 @@ return new class extends SettingsMigration
         'general.logo'                 => '',
         'general.logo_white'           => '',
         'general.favicon'              => '',
-        'general.booking_notify_emails' => 'info@swiftfixappliance.com',
-        'general.latitude'             => '32.7767',
-        'general.longitude'            => '-96.7970',
+        'general.booking_notify_emails' => 'info@rynexfix.com',
+        'general.latitude'             => '41.8781',
+        'general.longitude'            => '-87.6298',
     ];
 
     public function up(): void

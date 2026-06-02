@@ -11,9 +11,9 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::firstOrCreate(
-            ['email' => 'admin@swiftfix.com'],
+            ['email' => 'admin@rynexfix.com'],
             [
-                'name'     => 'Swift Fix Admin',
+                'name'     => 'Rynex Fix Admin',
                 'password' => Hash::make('admin123'),
             ]
         );
@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             PostSeeder::class,
             SettingsSeeder::class,
             FaqSeeder::class,
+            ZipCodeSeeder::class,
         ]);
     }
 }

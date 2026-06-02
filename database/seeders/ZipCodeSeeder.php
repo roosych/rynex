@@ -65,6 +65,10 @@ class ZipCodeSeeder extends Seeder
             ['60659', 'West Ridge / Peterson Park'],
             ['60660', 'Edgewater / Andersonville'],
             ['60661', 'West Loop / Greektown'],
+            ['60633', 'Hegewisch'],
+            ['60666', 'O\'Hare Airport'],
+            ['60707', 'Galewood'],
+            ['60827', 'Riverdale / Altgeld Gardens'],
         ];
 
         foreach ($zips as $i => [$code, $neighborhood]) {

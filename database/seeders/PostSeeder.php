@@ -29,7 +29,7 @@ class PostSeeder extends Seeder
                 <p>Clicking, buzzing, rattling, or humming that\'s louder than usual often points to a failing compressor, condenser fan, or evaporator fan.</p>
                 <h2>5. There\'s Water Pooling Inside or Underneath</h2>
                 <p>Leaking water is typically caused by a clogged defrost drain or a faulty water inlet valve. Left unchecked, it can cause floor damage and mold growth.</p>
-                <p><strong>If you notice any of these signs, don\'t wait.</strong> Call Swift Fix and we\'ll send a technician the same day to diagnose the problem before it becomes a full breakdown.</p>',
+                <p><strong>If you notice any of these signs, don\'t wait.</strong> Call Rynex Fix and we\'ll send a technician the same day to diagnose the problem before it becomes a full breakdown.</p>',
             ],
             [
                 'title'            => 'Is Your Washer Shaking Too Much? What It Really Means',
@@ -71,7 +71,7 @@ class PostSeeder extends Seeder
                 <p>The rubber gasket around the door can accumulate mold and debris. Wipe it down monthly with a damp cloth to prevent leaks and keep the seal flexible.</p>
                 <h2>Run a Cleaning Cycle Once a Month</h2>
                 <p>Use a dishwasher cleaner tablet or a cup of white vinegar in the bottom rack on an empty hot cycle. This removes mineral buildup and keeps the interior fresh.</p>
-                <p><strong>Even with good maintenance</strong>, dishwashers eventually develop issues. If yours is leaking, not cleaning properly, or making unusual sounds, call Swift Fix — we\'ll be there the same day.</p>',
+                <p><strong>Even with good maintenance</strong>, dishwashers eventually develop issues. If yours is leaking, not cleaning properly, or making unusual sounds, call Rynex Fix — we\'ll be there the same day.</p>',
             ],
             [
                 'title'            => 'Why Is My Refrigerator Not Cooling? Common Causes & Fixes',
@@ -92,7 +92,7 @@ class PostSeeder extends Seeder
                 <p>Low refrigerant causes gradual cooling loss. Signs include the fridge running non-stop and frost forming in unexpected places. Refrigerant work requires a certified technician.</p>
                 <h2>Blocked Air Vents</h2>
                 <p>Sometimes the fix is as simple as rearranging food. Overpacked shelves can block the internal air vents that circulate cold air between compartments.</p>
-                <p><strong>If basic checks don\'t resolve the issue</strong>, call Swift Fix. We diagnose refrigerators same-day and carry most common parts in our trucks.</p>',
+                <p><strong>If basic checks don\'t resolve the issue</strong>, call Rynex Fix. We diagnose refrigerators same-day and carry most common parts in our trucks.</p>',
             ],
             [
                 'title'            => '5 Signs Your Washer Needs a Repair (Don\'t Ignore These)',
@@ -113,29 +113,33 @@ class PostSeeder extends Seeder
                 <p>A musty odor — especially in front-loaders — often means mold has built up in the door seal or drum. This can worsen over time and transfer to your clothes.</p>
                 <h2>5. Excessive Noise or Vibration</h2>
                 <p>Banging, grinding, or unusual vibration during the spin cycle is a sign of worn bearings, damaged shock absorbers, or a failing motor.</p>
-                <p><strong>Don\'t wait until it stops working entirely.</strong> Call Swift Fix for same-day washer repair — we\'ll diagnose the issue and give you an honest upfront quote.</p>',
+                <p><strong>Don\'t wait until it stops working entirely.</strong> Call Rynex Fix for same-day washer repair — we\'ll diagnose the issue and give you an honest upfront quote.</p>',
             ],
             [
-                'title'            => 'How to Extend the Life of Your Dishwasher',
-                'slug'             => 'how-to-extend-life-of-your-dishwasher',
-                'meta_description' => 'Simple maintenance habits that keep your dishwasher running efficiently for years.',
-                'category'         => 'Dishwasher',
-                'published_at'     => '2025-04-10',
-                'image'            => '/template/images/template/caredish.jpg',
+                'title'            => 'Gas vs. Electric Oven: Which Is Cheaper to Run and Repair?',
+                'slug'             => 'gas-vs-electric-oven-cost-repair',
+                'meta_description' => 'Gas or electric oven — which costs less to run and repair? A practical breakdown for Chicago homeowners from the Rynex Fix technicians.',
+                'category'         => 'Oven',
+                'published_at'     => '2025-03-28',
+                'image'            => '/template/images/template/service-maintenance-worker-repairing.jpg',
                 'content'          => '
-                <p>A well-maintained dishwasher can last 10–15 years. Here are the most effective habits to extend its life and avoid costly repairs.</p>
-                <h2>Clean the Filter Monthly</h2>
-                <p>Food debris collects in the filter and causes odors, poor cleaning, and drainage problems. Rinse it under running water once a month.</p>
-                <h2>Don\'t Overload It</h2>
-                <p>Overloading blocks the spray arms, stresses the racks, and reduces cleaning performance. Leave space between items.</p>
-                <h2>Run a Cleaning Cycle Monthly</h2>
-                <p>Use a dishwasher cleaner or a cup of white vinegar in an empty hot cycle to remove mineral buildup and keep the interior fresh.</p>
-                <p><strong>If your dishwasher is leaking or not cleaning properly</strong>, call Swift Fix for same-day diagnosis.</p>',
+                <p>Choosing between a gas and electric oven — or deciding whether to repair the one you have — comes down to running costs, repair complexity, and how you cook. Here\'s how they really compare.</p>
+                <h2>Running Costs</h2>
+                <p>In most of Chicago, natural gas is cheaper per unit of heat than electricity, so gas ovens usually cost less to operate day to day. Electric ovens, however, hold a more even temperature, which matters for baking.</p>
+                <h2>Common Repairs — Gas Ovens</h2>
+                <p>Gas models typically need igniter replacements, gas valve repairs, and burner cleaning. The igniter is the single most common failure and is a straightforward fix for a technician.</p>
+                <h2>Common Repairs — Electric Ovens</h2>
+                <p>Electric ovens most often fail at the bake or broil heating element, the thermostat, or the control board. Elements are inexpensive; control boards are the pricier component.</p>
+                <h2>Which Is Cheaper to Repair?</h2>
+                <p>Gas oven repairs are usually a little cheaper on average because the failure points are simpler — but a gas leak or valve issue should always be handled by a certified technician for safety.</p>
+                <h2>The Bottom Line</h2>
+                <p>If your oven is under 10 years old, repair is almost always the smarter choice over replacement — regardless of fuel type.</p>
+                <p><strong>Not sure whether to repair or replace?</strong> Call Rynex Fix for an honest same-day assessment anywhere across Chicago.</p>',
             ],
         ];
 
         foreach ($posts as $data) {
-            Post::create($data);
+            Post::updateOrCreate(['slug' => $data['slug']], $data);
         }
     }
 }
