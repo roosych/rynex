@@ -339,43 +339,18 @@
 	/* Contact form validation end */
 
 	/* Appointment form validation */
+	/* Keep client-side validation, but let the form POST natively to the Laravel route
+	   (route('booking.store')) instead of the template's dead form-appointment.php endpoint.
+	   On a valid submit, lock the button so the form can't be submitted twice by accident. */
 	var $appointmentForm = $("#appointmentForm");
 	$appointmentForm.validator({focus: false}).on("submit", function (event) {
-		if (!event.isDefaultPrevented()) {
-			event.preventDefault();
-			submitappointmentForm();
-		}
+		if (event.isDefaultPrevented()) return; // invalid — validator shows field errors
+		var $btn = $appointmentForm.find('button[type="submit"]');
+		if ($btn.hasClass("is-loading")) { event.preventDefault(); return; } // already sending
+		$btn.addClass("is-loading").find("span").text("Sending...");
+		// disable on the next tick so the native POST isn't cancelled
+		setTimeout(function () { $btn.prop("disabled", true); }, 0);
 	});
-
-	function submitappointmentForm(){
-		/* Ajax call to submit form */
-		$.ajax({
-			type: "POST",
-			url: "form-appointment.php",
-			data: $appointmentForm.serialize(),
-			success : function(text){
-				if (text === "success"){
-					appointmentformSuccess();
-				} else {
-					appointmentsubmitMSG(false,text);
-				}
-			}
-		});
-	}
-
-	function appointmentformSuccess(){
-		$appointmentForm[0].reset();
-		appointmentsubmitMSG(true, "Message Sent Successfully!")
-	}
-
-	function appointmentsubmitMSG(valid, msg){
-		if(valid){
-			var msgClasses = "h3 text-success";
-		} else {
-			var msgClasses = "h3 text-danger";
-		}
-		$("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
-	}
 	/* Appointment form validation end */
 
 	/* Animated Wow Js */	

@@ -218,6 +218,16 @@
 
 
                         <div class="book-appointment-form wow fadeInUp" data-wow-delay="0.4s">
+                            @if ($errors->any())
+                            <div class="booking-form-alert" role="alert">
+                                <strong>We couldn't send your request. Please fix:</strong>
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            @endif
                             <form id="appointmentForm" action="{{ route('booking.store') }}" method="POST" data-toggle="validator">
                                 @csrf
                                 <div class="row">

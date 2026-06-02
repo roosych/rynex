@@ -7775,3 +7775,39 @@ header.main-header .header-sticky.active{
         font-size: 18px;
     }
 }
+
+/* Booking form: submit button loading state (prevents accidental double submit) */
+.btn-default.is-loading{
+    pointer-events: none;
+    opacity: 0.75;
+    cursor: progress;
+}
+.btn-default.is-loading::after{
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    vertical-align: middle;
+    border: 2px solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: btn-spin 0.6s linear infinite;
+}
+@keyframes btn-spin{
+    to { transform: rotate(360deg); }
+}
+
+/* Booking form: validation error banner */
+.booking-form-alert{
+    margin-bottom: 24px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: #fdecec;
+    border: 1px solid #f5c2c2;
+    color: #a12020;
+    font-size: 14px;
+}
+.booking-form-alert strong{ display:block; margin-bottom: 6px; }
+.booking-form-alert ul{ margin: 0; padding-left: 18px; }
+.booking-form-alert li{ margin: 2px 0; }

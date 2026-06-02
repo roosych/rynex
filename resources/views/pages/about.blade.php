@@ -83,7 +83,7 @@
     </div>
 
     {{-- Mission / Vision --}}
-    <div class="our-mission-vision bg-section">
+    <div class="our-mission-vision bg-section" style="margin-top:200px;">
         <div class="container">
             <div class="row section-row">
                 <div class="col-lg-12">
