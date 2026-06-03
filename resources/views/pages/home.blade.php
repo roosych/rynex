@@ -141,9 +141,6 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                                 </div>
                                 <div class="about-body-footer wow fadeInUp" data-wow-delay="0.6s">
                                     <a href="{{ route('about') }}" class="btn-default">learn more</a>
-                                    <div class="about-video-button">
-                                        <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"><i class="fa-solid fa-play"></i>watch video</a>
-                                    </div>
                                 </div>
                             </div>
                             <div class="about-team-member">
@@ -284,14 +281,9 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                             </figure>
                         </div>
                         <div class="video-play-box wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="video-play-button">
-                                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video" data-cursor-text="Play">
-                                    <i class="fa-solid fa-play"></i>
-                                </a>
-                            </div>
                             <div class="video-play-content">
-                                <h3>Our process</h3>
-                                <h2>See how we work</h2>
+                                <h3>On every job</h3>
+                                <h2>Repairs done right the first time</h2>
                             </div>
                         </div>
                     </div>

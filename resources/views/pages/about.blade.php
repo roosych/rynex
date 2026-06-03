@@ -45,9 +45,6 @@
                                 </div>
                                 <div class="about-body-footer wow fadeInUp" data-wow-delay="0.6s">
                                     <a href="{{ route('booking') }}" class="btn-default">book a service</a>
-                                    <div class="about-video-button">
-                                        <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video"><i class="fa-solid fa-play"></i>watch video</a>
-                                    </div>
                                 </div>
                             </div>
                             <div class="about-team-member">

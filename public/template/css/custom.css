@@ -1731,6 +1731,10 @@ header.main-header .header-sticky.active{
     letter-spacing: -0.02em;
 }
 
+.video-play-content{
+	width: 100%;
+}
+
 .our-process-content{
 	height: 100%;
 	display: flex;
