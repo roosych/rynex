@@ -73,6 +73,13 @@ class BrandController extends Controller
             ->with('success', 'Brand updated successfully.');
     }
 
+    public function toggle(Brand $brand)
+    {
+        $brand->update(['is_active' => ! $brand->is_active]);
+
+        return response()->json(['ok' => true, 'is_active' => $brand->is_active]);
+    }
+
     public function destroy(Brand $brand)
     {
         $brand->delete();

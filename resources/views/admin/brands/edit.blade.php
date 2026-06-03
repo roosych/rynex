@@ -81,17 +81,19 @@
 
             <div class="admin-card" style="border:1px solid #fee2e2;">
                 <div class="admin-card-body">
-                    <form method="POST" action="{{ route('admin.brands.destroy', $brand) }}"
-                          onsubmit="return confirm('Delete this brand permanently?')">
-                        @csrf @method('DELETE')
-                        <button type="submit" class="admin-btn admin-btn-danger" style="width:100%;">
-                            <i class="fa-solid fa-trash"></i> Delete Brand
-                        </button>
-                    </form>
+                    <button type="submit" form="brand-delete-form" class="admin-btn admin-btn-danger" style="width:100%;">
+                        <i class="fa-solid fa-trash"></i> Delete Brand
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+</form>
+
+{{-- Kept outside the update form: nested forms are invalid and would hijack the Save submit --}}
+<form id="brand-delete-form" method="POST" action="{{ route('admin.brands.destroy', $brand) }}"
+      onsubmit="return confirm('Delete this brand permanently?')">
+    @csrf @method('DELETE')
 </form>
 
 @endsection

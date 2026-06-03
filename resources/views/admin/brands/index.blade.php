@@ -38,9 +38,12 @@
                     </td>
                     <td><strong>{{ $brand->name }}</strong></td>
                     <td>
-                        <span class="badge-status {{ $brand->is_active ? 'badge-active' : 'badge-inactive' }}">
-                            {{ $brand->is_active ? 'Active' : 'Inactive' }}
-                        </span>
+                        <label class="brand-switch" title="Toggle active">
+                            <input type="checkbox" class="brand-toggle" data-id="{{ $brand->id }}"
+                                   {{ $brand->is_active ? 'checked' : '' }}>
+                            <span class="brand-switch-slider"></span>
+                        </label>
+                        <span class="brand-switch-label">{{ $brand->is_active ? 'Active' : 'Inactive' }}</span>
                     </td>
                     <td style="text-align:right;">
                         <a href="{{ route('admin.brands.edit', $brand) }}"
@@ -62,5 +65,57 @@
         @endif
     </div>
 </div>
+
+@push('styles')
+<style>
+.brand-switch { position: relative; display: inline-block; width: 42px; height: 24px; vertical-align: middle; }
+.brand-switch input { opacity: 0; width: 0; height: 0; }
+.brand-switch-slider {
+    position: absolute; cursor: pointer; inset: 0;
+    background: #cbd5e1; border-radius: 24px; transition: background 0.2s;
+}
+.brand-switch-slider::before {
+    content: ""; position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px;
+    background: #fff; border-radius: 50%; transition: transform 0.2s;
+}
+.brand-switch input:checked + .brand-switch-slider { background: #10b981; }
+.brand-switch input:checked + .brand-switch-slider::before { transform: translateX(18px); }
+.brand-switch input:disabled + .brand-switch-slider { opacity: 0.5; cursor: default; }
+.brand-switch-label { margin-left: 10px; font-size: 0.82rem; color: #6b7280; }
+</style>
+@endpush
+
+@push('scripts')
+<script>
+document.querySelectorAll('.brand-toggle').forEach(function (input) {
+    input.addEventListener('change', function () {
+        var label = input.closest('td').querySelector('.brand-switch-label');
+        input.disabled = true;
+        fetch('{{ url('admin/brands') }}/' + input.dataset.id + '/toggle', {
+            method: 'PATCH',
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                'Accept': 'application/json'
+            }
+        })
+        .then(function (res) {
+            if (!res.ok) throw new Error('Request failed');
+            return res.json();
+        })
+        .then(function (data) {
+            input.checked = data.is_active;
+            if (label) label.textContent = data.is_active ? 'Active' : 'Inactive';
+        })
+        .catch(function () {
+            input.checked = !input.checked; // revert on error
+            alert('Could not update brand status. Please try again.');
+        })
+        .finally(function () {
+            input.disabled = false;
+        });
+    });
+});
+</script>
+@endpush
 
 @endsection

@@ -50,6 +50,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::post('services/reorder', [AdminServiceController::class, 'reorder'])->name('services.reorder');
     Route::resource('posts', AdminPostController::class)->except(['show']);
     Route::resource('faqs', FaqController::class)->except(['show']);
+    Route::patch('brands/{brand}/toggle', [BrandController::class, 'toggle'])->name('brands.toggle');
     Route::resource('brands', BrandController::class)->except(['show']);
     Route::post('zipcodes/bulk-toggle', [ZipCodeController::class, 'bulkToggle'])->name('zipcodes.bulk-toggle');
     Route::resource('zipcodes', ZipCodeController::class)->except(['show']);
