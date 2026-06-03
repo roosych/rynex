@@ -121,18 +121,25 @@
 	if ($('.testimonial-company-slider').length) {
 		const testimonial_company_slider = new Swiper('.testimonial-company-slider .swiper', {
 			slidesPerView : 2,
+			slidesPerGroup : 2,
 			speed: 2000,
 			spaceBetween: 40,
 			loop: true,
 			autoplay: {
 				delay: 5000,
 			},
+			navigation: {
+				nextEl: '.trusted-client-button-next',
+				prevEl: '.trusted-client-button-prev',
+			},
 			breakpoints: {
 				768:{
 				  	slidesPerView: 4,
+				  	slidesPerGroup: 4,
 				},
 				991:{
 				  	slidesPerView: 5,
+				  	slidesPerGroup: 5,
 				}
 			}
 		});

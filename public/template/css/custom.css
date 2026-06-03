@@ -2257,34 +2257,64 @@ header.main-header .header-sticky.active{
     background-color: var(--primary-color);
 }
 
-.trusted-client-box{
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	gap: 30px;
-    margin-top: 60px;
-}
-
-.trusted-client-title h3{
-	font-size: 22px;
-	line-height: 1.4em;
-	text-transform: capitalize;
-	max-width: 270px;
-}
-
-.trusted-client-box .testimonial-company-slider{
-	width: calc(100% - 300px);
-}
-
 .trusted-client-logo{
 	text-align: center;
 }
 
+.trusted-client{
+	padding: 100px 0;
+}
+
 .trusted-client-logo img{
 	width: 100%;
-	height: 40px;
+	height: 110px;
+	object-fit: contain;
 	transition: all 0.3s ease-in-out;
 }
+
+.trusted-client-name{
+	display: inline-block;
+	font-size: 34px;
+	font-weight: 700;
+	line-height: 110px;
+	color: var(--text-color);
+	white-space: nowrap;
+	opacity: 0.65;
+}
+
+.testimonial-company-slider{
+	width: 100%;
+	position: relative;
+	padding: 0 56px;
+}
+
+.trusted-client-button-prev,
+.trusted-client-button-next{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 5;
+	width: 42px;
+	height: 42px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: var(--accent-color);
+	color: #fff;
+	font-size: 15px;
+	cursor: pointer;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.trusted-client-button-prev{ left: 0; }
+.trusted-client-button-next{ right: 0; }
+
+.trusted-client-button-prev:hover,
+.trusted-client-button-next:hover{ opacity: 0.85; }
+
+.trusted-client-button-prev.swiper-button-disabled,
+.trusted-client-button-next.swiper-button-disabled{ opacity: 0.4; cursor: default; }
 
 /************************************/
 /***       14. Our Team css 	  ***/
@@ -6002,18 +6032,8 @@ header.main-header .header-sticky.active{
         margin-top: 30px;
     }
 
-	.trusted-client-box{
-		gap: 20px;
-		margin-top: 40px;
-	}
-
-    .trusted-client-title h3{
-        font-size: 20px;
-        max-width: 220px;
-    }
-
-    .trusted-client-box .testimonial-company-slider{
-        width: calc(100% - 240px);
+    .testimonial-company-slider{
+        padding: 0 44px;
     }
 
 	.our-team{
@@ -7291,15 +7311,6 @@ header.main-header .header-sticky.active{
 
     .author-content h3{
         font-size: 18px;
-    }
-
-    .trusted-client-title h3{
-        font-size: 18px;
-        max-width: 100%;
-    }
-
-    .trusted-client-box .testimonial-company-slider{
-        width: 100%;
     }
 
 	.team-body{

@@ -52,24 +52,6 @@ $serviceSchema = \Spatie\SchemaOrg\Schema::service()
                                 @endforeach
                             </ul>
                         </div>
-                        <div class="sidebar-cta-box wow fadeInUp" data-wow-delay="0.25s">
-                            <div class="sidebar-cta-image">
-                                <figure class="image-anime">
-                                    <img src="/template/images/template/service-maintenance-worker-repairing.jpg" alt="Swift Fix technician at work">
-                                </figure>
-                            </div>
-                            <div class="sidebar-cta-content">
-                                <p>Same-day service available</p>
-                                <h3>Appliance Down? We'll Fix It Today</h3>
-                            </div>
-                            <div class="sidebar-cta-contact">
-                                <div class="icon-box"><img src="/template/images/icon-sidebar-phone.svg" alt=""></div>
-                                <div class="sidebar-contact-content">
-                                    <p>call us now!</p>
-                                    <h3><a href="tel:+15551234567">+1 (555) 123-4567</a></h3>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -92,6 +74,7 @@ $serviceSchema = \Spatie\SchemaOrg\Schema::service()
         </div>
     </div>
 
+    @include('partials.trusted-brands')
     @include('partials.ticker')
 
 @endsection

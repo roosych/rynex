@@ -269,6 +269,9 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
         </div>
     </div>
 
+    {{-- Trusted Brands --}}
+    @include('partials.trusted-brands')
+
     {{-- Our Process --}}
     <div class="our-process bg-section">
         <div class="container-fluid">

@@ -83,7 +83,7 @@
     </div>
 
     {{-- Mission / Vision --}}
-    <div class="our-mission-vision bg-section" style="margin-top:200px;">
+    <div class="our-mission-vision bg-section">
         <div class="container">
             <div class="row section-row">
                 <div class="col-lg-12">
@@ -96,7 +96,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="mission-vision-list">
+                    <div class="mission-vision-list mb-5">
                         <div class="mission-vision-item wow fadeInUp">
                             <div class="icon-box"><img src="/template/images/icon-our-mission.svg" alt=""></div>
                             <div class="mission-vision-content">
@@ -123,6 +123,9 @@
             </div>
         </div>
     </div>
+
+    {{-- Trusted Brands --}}
+    @include('partials.trusted-brands')
 
     {{-- Benefits --}}
     <div class="our-benefit bg-section dark-section">

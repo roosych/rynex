@@ -270,6 +270,11 @@
                     <i class="fa-solid fa-newspaper"></i> Blog Posts
                 </a>
             </li>
+            <li class="{{ Request::routeIs('admin.brands*') ? 'active' : '' }}">
+                <a href="{{ route('admin.brands.index') }}">
+                    <i class="fa-solid fa-copyright"></i> Brands
+                </a>
+            </li>
             <li class="{{ Request::routeIs('admin.bookings*') ? 'active' : '' }}">
                 <a href="{{ route('admin.bookings.index') }}">
                     <i class="fa-solid fa-calendar-check"></i> Bookings

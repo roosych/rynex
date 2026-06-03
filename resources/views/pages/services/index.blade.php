@@ -38,7 +38,7 @@
         </div>
     </section>
 
-    <section class="our-process bg-section">
+    <section class="our-process bg-section" style="margin-bottom: 100px;">
         <div class="container-fluid">
             <div class="row no-gutters">
                 <div class="col-lg-6">
@@ -90,6 +90,7 @@
         </div>
     </section>
 
+    @include('partials.trusted-brands')
     @include('partials.testimonials')
     @include('partials.ticker')
 

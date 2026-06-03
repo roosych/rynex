@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\ZipCodeController;
+use App\Http\Controllers\Admin\BrandController;
 
 // ─── Frontend ────────────────────────────────────────────────────────────────
 
@@ -49,6 +50,7 @@ Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
     Route::post('services/reorder', [AdminServiceController::class, 'reorder'])->name('services.reorder');
     Route::resource('posts', AdminPostController::class)->except(['show']);
     Route::resource('faqs', FaqController::class)->except(['show']);
+    Route::resource('brands', BrandController::class)->except(['show']);
     Route::post('zipcodes/bulk-toggle', [ZipCodeController::class, 'bulkToggle'])->name('zipcodes.bulk-toggle');
     Route::resource('zipcodes', ZipCodeController::class)->except(['show']);
 

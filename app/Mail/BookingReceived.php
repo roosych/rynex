@@ -24,7 +24,7 @@ class BookingReceived extends Mailable
 
         return new Envelope(
             subject: "New booking request — {$this->booking->name}" . ($company ? " | {$company}" : ''),
-            replyTo: [$this->booking->email],
+            replyTo: array_filter([$this->booking->email]),
         );
     }
 

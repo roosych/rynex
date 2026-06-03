@@ -8,7 +8,7 @@ A new service request was submitted through the website.
 |:----------------|:------------------------------------------------|
 | **Name** | {{ $booking->name }} |
 | **Phone** | {{ $booking->phone }} |
-| **Email** | {{ $booking->email }} |
+| **Brand** | {{ $booking->brand ?? '—' }} |
 | **Service** | {{ $booking->service }} |
 | **ZIP code** | {{ $booking->zip_code }} |
 | **Preferred date** | {{ $booking->preferred_date?->format('M j, Y') ?? '—' }} |

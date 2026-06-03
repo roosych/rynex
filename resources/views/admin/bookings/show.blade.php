@@ -23,9 +23,9 @@
                     @php
                         $rows = [
                             ['Name',           $booking->name],
-                            ['Email',          $booking->email],
                             ['Phone',          $booking->phone],
                             ['Service',        $booking->service],
+                            ['Brand',          $booking->brand ?? '—'],
                             ['ZIP Code',       $booking->zip_code ?? '—'],
                             ['Preferred Date', $booking->preferred_date?->format('M j, Y') ?? '—'],
                             ['Preferred Time', $booking->preferred_time ?? '—'],

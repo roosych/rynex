@@ -240,7 +240,14 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="form-group col-md-6 mb-4">
-                                        <input type="email" name="email" class="form-control" placeholder="Email Address" value="{{ old('email') }}" required>
+                                        <select id="brand_select" name="brand" class="form-control" required>
+                                            <option value="" disabled selected>Select brand</option>
+                                            @foreach($brands as $brand)
+                                            <option value="{{ $brand->name }}" {{ old('brand') == $brand->name ? 'selected' : '' }}>
+                                                {{ $brand->name }}
+                                            </option>
+                                            @endforeach
+                                        </select>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="form-group col-md-6 mb-4">
@@ -336,6 +343,12 @@ $(function () {
         minimumResultsForSearch: Infinity,
         width: '100%',
         dropdownParent: $('#service_select').parent(),
+    });
+
+    $('#brand_select').select2({
+        placeholder: 'Select brand',
+        width: '100%',
+        dropdownParent: $('#brand_select').parent(),
     });
 
     $('#zip_code_select').select2({

@@ -8,6 +8,7 @@ use App\Settings\GeneralSettings;
 use App\Settings\HeroSettings;
 use App\Settings\ProcessSettings;
 use App\Settings\SeoSettings;
+use App\Models\Brand;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
@@ -29,6 +30,14 @@ class AppServiceProvider extends ServiceProvider
             View::share('processSettings', app(ProcessSettings::class));
             View::share('benefitsSettings', app(BenefitsSettings::class));
             View::share('seoSettings',      app(SeoSettings::class));
+        }
+
+        // Provide active brands to the trusted-brands slider partial wherever it's included
+        if (Schema::hasTable('brands')) {
+            View::composer('partials.trusted-brands', function ($view) {
+                $view->with('brands', Brand::where('is_active', true)
+                    ->orderBy('sort_order')->orderBy('name')->with('media')->get());
+            });
         }
     }
 }
