@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Admin') | Swift Fix Admin</title>
+    <title>@yield('title', 'Admin') | {{ $generalSettings->company_name }} Admin</title>
 
     {{-- Template CSS --}}
     <link rel="stylesheet" href="/template/css/bootstrap.min.css">

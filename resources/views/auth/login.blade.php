@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login | Swift Fix</title>
+    <title>Admin Login | {{ $generalSettings->company_name }}</title>
     <link rel="stylesheet" href="/template/css/bootstrap.min.css">
     <link rel="stylesheet" href="/template/css/all.min.css">
     <link rel="stylesheet" href="/template/css/style.css">
