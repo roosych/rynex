@@ -49,14 +49,9 @@
                             </figure>
                         </div>
                         <div class="video-play-box wow fadeInUp">
-                            <div class="video-play-button">
-                                <a href="https://www.youtube.com/watch?v=Y-x0efG1seA" class="popup-video" data-cursor-text="Play">
-                                    <i class="fa-solid fa-play"></i>
-                                </a>
-                            </div>
                             <div class="video-play-content">
-                                <h3>How it works</h3>
-                                <h2>See us in action</h2>
+                                <h3>trusted technicians</h3>
+                                <h2>Repairs done right, the first time</h2>
                             </div>
                         </div>
                     </div>
