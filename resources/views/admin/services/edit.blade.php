@@ -46,7 +46,7 @@
                         <input type="text" id="meta_title" name="meta_title"
                                class="form-control @error('meta_title') is-invalid @enderror"
                                value="{{ old('meta_title', $service->meta_title) }}" maxlength="100"
-                               placeholder="Оставь пустым — будет: {{ $service->title }} in Dallas, TX | {{ $generalSettings->company_name }}">
+                               placeholder="Оставь пустым — будет: {{ $service->title }} in Chicago, IL | {{ $generalSettings->company_name }}">
                         @error('meta_title')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
 
@@ -84,8 +84,8 @@
                         'metaTitleField'   => 'meta_title',
                         'metaDescField'    => 'meta_description',
                         'serpUrl'          => route('services.show', $service->slug),
-                        'serpFallbackTitle'=> $service->title . ' in Dallas, TX | ' . $generalSettings->company_name,
-                        'serpFallbackDesc' => 'Professional ' . $service->title . ' in Dallas, TX.',
+                        'serpFallbackTitle'=> $service->title . ' in Chicago, IL | ' . $generalSettings->company_name,
+                        'serpFallbackDesc' => 'Professional ' . $service->title . ' in Chicago, IL.',
                     ])
 
                     <div class="mb-2" style="margin-top:24px;">
