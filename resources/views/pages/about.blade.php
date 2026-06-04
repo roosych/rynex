@@ -50,7 +50,7 @@
                             <div class="about-team-member">
                                 <img src="/template/images/icon-about-team-member.svg" alt="">
                                 <h2><span class="counter">{{ $aboutSettings->technicians }}</span>+</h2>
-                                <p>Certified technicians</p>
+                                <p>{{ $aboutSettings->technicians_label }}</p>
                             </div>
                         </div>
                     </div>
@@ -59,19 +59,19 @@
                     <div class="about-counter-list">
                         <div class="about-counter-item">
                             <div class="icon-box"><img src="/template/images/icon-about-counter-1.svg" alt=""></div>
-                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->satisfaction_rate }}</span>%</h2><p>customer satisfaction rate</p></div>
+                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->satisfaction_rate }}</span>%</h2><p>{{ $aboutSettings->satisfaction_rate_label }}</p></div>
                         </div>
                         <div class="about-counter-item">
                             <div class="icon-box"><img src="/template/images/icon-about-counter-2.svg" alt=""></div>
-                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->years_experience }}</span>+</h2><p>years of experience</p></div>
+                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->years_experience }}</span>+</h2><p>{{ $aboutSettings->years_experience_label }}</p></div>
                         </div>
                         <div class="about-counter-item">
                             <div class="icon-box"><img src="/template/images/icon-about-counter-3.svg" alt=""></div>
-                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->appliances_repaired }}</span>+</h2><p>appliances repaired</p></div>
+                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->appliances_repaired }}</span>+</h2><p>{{ $aboutSettings->appliances_repaired_label }}</p></div>
                         </div>
                         <div class="about-counter-item">
                             <div class="icon-box"><img src="/template/images/icon-about-counter-4.svg" alt=""></div>
-                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->cities_served }}</span>+</h2><p>cities & zip codes served</p></div>
+                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->cities_served }}</span>+</h2><p>{{ $aboutSettings->cities_served_label }}</p></div>
                         </div>
                     </div>
                 </div>

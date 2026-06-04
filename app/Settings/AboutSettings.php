@@ -14,6 +14,12 @@ class AboutSettings extends Settings
     public int    $appliances_repaired = 5000;
     public int    $cities_served       = 50;
 
+    public string $technicians_label         = 'Certified technicians';
+    public string $satisfaction_rate_label   = 'customer satisfaction rate';
+    public string $years_experience_label    = 'years of experience';
+    public string $appliances_repaired_label = 'appliances repaired';
+    public string $cities_served_label       = 'cities & zip codes served';
+
     public string $mission_title = 'our mission';
     public string $mission_text  = 'To deliver fast, reliable appliance repair with upfront pricing and zero surprises — every single time.';
     public string $vision_title  = 'our vision';

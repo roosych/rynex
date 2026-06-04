@@ -46,7 +46,7 @@
 
         <div class="col-lg-5">
             <div class="admin-card">
-                <div class="admin-card-header"><h2>Counter Numbers</h2></div>
+                <div class="admin-card-header"><h2>Counters</h2></div>
                 <div class="admin-card-body">
                     @foreach ([
                         ['technicians',         'Certified Technicians'],
@@ -55,10 +55,14 @@
                         ['appliances_repaired', 'Appliances Repaired'],
                         ['cities_served',       'Cities & Zip Codes Served'],
                     ] as [$key, $label])
+                    @php $labelKey = $key . '_label'; @endphp
                     <div class="mb-4">
                         <label class="admin-form-label">{{ $label }}</label>
-                        <input type="number" name="{{ $key }}" class="form-control"
+                        <input type="number" name="{{ $key }}" class="form-control mb-2"
                                value="{{ old($key, $settings->$key) }}" min="0">
+                        <input type="text" name="{{ $labelKey }}" class="form-control"
+                               value="{{ old($labelKey, $settings->$labelKey) }}"
+                               placeholder="Label shown under the number">
                     </div>
                     @endforeach
                 </div>

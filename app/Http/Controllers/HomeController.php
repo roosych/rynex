@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $services    = Service::where('is_active', true)->orderBy('sort_order')->with('media')->take(5)->get();
+        $services    = Service::where('is_active', true)->orderBy('sort_order')->with('media')->get();
         $latestPosts = Post::where('is_active', true)->orderByDesc('published_at')->with('media')->take(3)->get();
         $faqs        = Faq::where('is_active', true)->orderBy('sort_order')->get();
 

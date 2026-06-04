@@ -143,11 +143,6 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                                     <a href="{{ route('about') }}" class="btn-default">learn more</a>
                                 </div>
                             </div>
-                            <div class="about-team-member">
-                                <img src="/template/images/icon-about-team-member.svg" alt="">
-                                <h2><span class="counter">{{ $aboutSettings->technicians }}</span>+</h2>
-                                <p>Certified technicians</p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -155,19 +150,19 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                     <div class="about-counter-list">
                         <div class="about-counter-item">
                             <div class="icon-box"><img src="/template/images/icon-about-counter-1.svg" alt=""></div>
-                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->satisfaction_rate }}</span>%</h2><p>customer satisfaction rate</p></div>
+                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->satisfaction_rate }}</span>%</h2><p>{{ $aboutSettings->satisfaction_rate_label }}</p></div>
                         </div>
                         <div class="about-counter-item">
                             <div class="icon-box"><img src="/template/images/icon-about-counter-2.svg" alt=""></div>
-                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->years_experience }}</span>+</h2><p>years of experience</p></div>
+                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->years_experience }}</span>+</h2><p>{{ $aboutSettings->years_experience_label }}</p></div>
                         </div>
                         <div class="about-counter-item">
                             <div class="icon-box"><img src="/template/images/icon-about-counter-3.svg" alt=""></div>
-                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->appliances_repaired }}</span>+</h2><p>appliances repaired</p></div>
+                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->appliances_repaired }}</span>+</h2><p>{{ $aboutSettings->appliances_repaired_label }}</p></div>
                         </div>
                         <div class="about-counter-item">
                             <div class="icon-box"><img src="/template/images/icon-about-counter-4.svg" alt=""></div>
-                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->cities_served }}</span>+</h2><p>cities & zip codes served</p></div>
+                            <div class="about-counter-content"><h2><span class="counter">{{ $aboutSettings->cities_served }}</span>+</h2><p>{{ $aboutSettings->cities_served_label }}</p></div>
                         </div>
                     </div>
                 </div>
@@ -175,7 +170,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
         </div>
     </div>
 
-    {{-- Our Services Slider --}}
+    {{-- Our Services --}}
     <div class="our-services bg-section">
         <div class="container">
             <div class="row section-row align-items-center">
@@ -188,37 +183,28 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="services-slider">
-                        <div class="swiper">
-                            <div class="swiper-wrapper">
-                                @foreach ($services as $service)
-                                <div class="swiper-slide">
-                                    <div class="service-box">
-                                        <div class="service-image">
-                                            <a href="{{ route('services.show', $service->slug) }}" data-cursor-text="View">
-                                                <figure class="image-anime">
-                                                    <img src="{{ $service->image_url ?: '/template/images/template/service-maintenance-worker-repairing.jpg' }}"
-                                                         alt="{{ $service->title }}">
-                                                </figure>
-                                            </a>
-                                        </div>
-                                        <div class="service-item">
-                                            <div class="service-content">
-                                                <h3><a href="{{ route('services.show', $service->slug) }}">{{ $service->title }}</a></h3>
-                                                @if ($service->excerpt)
-                                                    <p>{{ $service->excerpt }}</p>
-                                                @endif
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                @endforeach
+                @foreach ($services as $index => $service)
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-box wow fadeInUp" data-wow-delay="{{ ($index % 3) * 0.2 }}s">
+                        <div class="service-image">
+                            <a href="{{ route('services.show', $service->slug) }}" data-cursor-text="View">
+                                <figure class="image-anime">
+                                    <img src="{{ $service->image_url ?: '/template/images/template/service-maintenance-worker-repairing.jpg' }}"
+                                         alt="{{ $service->title }}">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-content">
+                                <h3><a href="{{ route('services.show', $service->slug) }}">{{ $service->title }}</a></h3>
+                                @if ($service->excerpt)
+                                    <p>{{ $service->excerpt }}</p>
+                                @endif
                             </div>
-                            <div class="services-pagination"></div>
                         </div>
                     </div>
                 </div>
+                @endforeach
                 <div class="col-lg-12">
                     <div class="section-footer-text wow fadeInUp" data-wow-delay="0.2s">
                         <p>Something broken at home? <a href="{{ route('booking') }}">Give us a call — we'll be there today.</a></p>

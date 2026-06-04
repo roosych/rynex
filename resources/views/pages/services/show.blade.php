@@ -75,6 +75,9 @@ $serviceSchema = \Spatie\SchemaOrg\Schema::service()
     </div>
 
     @include('partials.trusted-brands')
+
+    @include('partials.booking-form', ['showMap' => false])
+
     @include('partials.ticker')
 
 @endsection
