@@ -53,6 +53,6 @@
 <link rel="stylesheet" href="/template/css/magnific-popup.css">
 <link rel="stylesheet" href="/template/css/mousecursor.css">
 <link rel="stylesheet" href="/template/css/twentytwenty.css">
-<link href="/template/css/custom.css" rel="stylesheet" media="screen">
+<link href="/template/css/custom.css?v={{ filemtime(public_path('template/css/custom.css')) }}" rel="stylesheet" media="screen">
 @stack('styles')
 @stack('schema')
