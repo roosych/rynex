@@ -54,7 +54,7 @@
 
 <div class="login-card">
     <div class="login-logo">
-        <img src="/template/images/template/logo1.png" alt="Swift Fix" onerror="this.style.display='none'">
+        <img src="{{ $generalSettings->logo ?: '/template/images/template/logo1.png' }}" alt="{{ $generalSettings->company_name }}" onerror="this.style.display='none'">
     </div>
     <div class="login-title">Admin Login</div>
     <div class="login-subtitle">Sign in to manage your content</div>

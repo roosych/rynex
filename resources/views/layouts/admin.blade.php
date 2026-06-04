@@ -243,7 +243,7 @@
 <div class="admin-sidebar">
     <div class="admin-sidebar-logo">
         <a href="{{ route('admin.dashboard') }}">
-            <img src="/template/images/template/logo1white.png" alt="Swift Fix">
+            <img src="{{ $generalSettings->logo_white ?: '/template/images/template/logo1white.png' }}" alt="{{ $generalSettings->company_name }}">
         </a>
         <span style="display:block;padding-top:6px;padding-left:2px;">Admin Panel</span>
     </div>
