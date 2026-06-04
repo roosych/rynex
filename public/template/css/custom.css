@@ -367,7 +367,7 @@ body{
 }
 
 .bg-section.dark-section{
-	background-color: var(--accent-color);
+	background-color: #001e46;
 }
 
 .section-row{
