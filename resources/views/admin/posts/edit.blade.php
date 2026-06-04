@@ -39,7 +39,7 @@
                         <input type="text" id="meta_title" name="meta_title"
                                class="form-control @error('meta_title') is-invalid @enderror"
                                value="{{ old('meta_title', $post->meta_title) }}" maxlength="100"
-                               placeholder="Оставь пустым — будет: {{ $post->title }} | Swift Fix Blog">
+                               placeholder="Оставь пустым — будет: {{ $post->title }} | {{ $generalSettings->company_name }} Blog">
                         @error('meta_title')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
 
@@ -56,8 +56,8 @@
                         'metaTitleField'   => 'meta_title',
                         'metaDescField'    => 'meta_description',
                         'serpUrl'          => route('blog.show', $post->slug),
-                        'serpFallbackTitle'=> $post->title . ' | Swift Fix Blog',
-                        'serpFallbackDesc' => 'Appliance repair tips and advice from Swift Fix technicians.',
+                        'serpFallbackTitle'=> $post->title . ' | ' . $generalSettings->company_name . ' Blog',
+                        'serpFallbackDesc' => 'Appliance repair tips and advice from ' . $generalSettings->company_name . ' technicians.',
                     ])
 
                     <div class="mb-4" style="margin-top:24px;">
