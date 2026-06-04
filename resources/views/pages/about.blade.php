@@ -47,11 +47,6 @@
                                     <a href="{{ route('booking') }}" class="btn-default">book a service</a>
                                 </div>
                             </div>
-                            <div class="about-team-member">
-                                <img src="/template/images/icon-about-team-member.svg" alt="">
-                                <h2><span class="counter">{{ $aboutSettings->technicians }}</span>+</h2>
-                                <p>{{ $aboutSettings->technicians_label }}</p>
-                            </div>
                         </div>
                     </div>
                 </div>
