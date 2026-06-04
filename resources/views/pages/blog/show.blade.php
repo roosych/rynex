@@ -61,7 +61,6 @@ if ($postImage) {
                         <h1 class="text-anime-style-3" data-cursor="-opaque">{{ $post['title'] ?? 'Blog Post' }}</h1>
                         <div class="post-single-meta wow fadeInUp">
                             <ol class="breadcrumb">
-                                <li><i class="fa-regular fa-user"></i> Swift Fix Team</li>
                                 <li><i class="fa-regular fa-clock"></i> {{ $post['date'] ?? '' }}</li>
                                 <li><i class="fa-regular fa-folder"></i> {{ $post['category'] ?? '' }}</li>
                             </ol>
