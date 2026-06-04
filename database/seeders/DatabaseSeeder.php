@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         );
 
         $this->call([
-            ServiceSeeder::class,
+            ServiceCatalogSeeder::class,
             PostSeeder::class,
             SettingsSeeder::class,
             FaqSeeder::class,
