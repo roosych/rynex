@@ -47,12 +47,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+{{-- Render-blocking: needed for the first paint (hero layout + styles) --}}
 <link href="/template/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="/template/css/slicknav.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/template/css/swiper-bundle.min.css">
-<link href="/template/css/all.min.css?v={{ filemtime(public_path('template/css/all.min.css')) }}" rel="stylesheet" media="screen">
-<link href="/template/css/animate.css" rel="stylesheet">
-<link rel="stylesheet" href="/template/css/mousecursor.css">
 <link href="/template/css/custom.css?v={{ filemtime(public_path('template/css/custom.css')) }}" rel="stylesheet" media="screen">
+
+{{-- Non-critical: load async so they don't block the hero (LCP) --}}
+@php
+    $deferredCss = [
+        '/template/css/slicknav.min.css',
+        '/template/css/swiper-bundle.min.css',
+        '/template/css/all.min.css?v=' . filemtime(public_path('template/css/all.min.css')),
+        '/template/css/animate.css',
+        '/template/css/mousecursor.css',
+    ];
+@endphp
+@foreach ($deferredCss as $css)
+<link rel="stylesheet" href="{{ $css }}" media="print" onload="this.media='all'">
+@endforeach
+<noscript>
+    @foreach ($deferredCss as $css)
+    <link rel="stylesheet" href="{{ $css }}">
+    @endforeach
+</noscript>
 @stack('styles')
 @stack('schema')
