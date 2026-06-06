@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="@yield('meta_description', 'Fast, affordable appliance repair near you. We fix refrigerators, washers, dryers, ovens & more. Certified technicians, same-day service, warranty included.')">
 <meta name="keywords" content="@yield('meta_keywords', 'appliance repair, refrigerator repair, washer repair, dryer repair, dishwasher repair, oven repair, HVAC repair, same day appliance repair near me')">
 <meta name="author" content="{{ $generalSettings->company_name ?? 'Swift Fix Appliance Repair' }}">

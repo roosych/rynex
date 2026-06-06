@@ -75,13 +75,13 @@
                         <span>Follow us on social</span>
                         <ul>
                             @if ($generalSettings->social_facebook)
-                            <li><a href="{{ $generalSettings->social_facebook }}" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="{{ $generalSettings->social_facebook }}" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a></li>
                             @endif
                             @if ($generalSettings->social_instagram)
-                            <li><a href="{{ $generalSettings->social_instagram }}" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="{{ $generalSettings->social_instagram }}" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a></li>
                             @endif
                             @if ($generalSettings->social_yelp)
-                            <li><a href="{{ $generalSettings->social_yelp }}" target="_blank" rel="noopener"><i class="fa-brands fa-yelp"></i></a></li>
+                            <li><a href="{{ $generalSettings->social_yelp }}" target="_blank" rel="noopener" aria-label="Yelp"><i class="fa-brands fa-yelp" aria-hidden="true"></i></a></li>
                             @endif
                         </ul>
                     </div>
