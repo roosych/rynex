@@ -50,7 +50,7 @@
 <link href="/template/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="/template/css/slicknav.min.css" rel="stylesheet">
 <link rel="stylesheet" href="/template/css/swiper-bundle.min.css">
-<link href="/template/css/all.min.css" rel="stylesheet" media="screen">
+<link href="/template/css/all.min.css?v={{ filemtime(public_path('template/css/all.min.css')) }}" rel="stylesheet" media="screen">
 <link href="/template/css/animate.css" rel="stylesheet">
 <link rel="stylesheet" href="/template/css/mousecursor.css">
 <link href="/template/css/custom.css?v={{ filemtime(public_path('template/css/custom.css')) }}" rel="stylesheet" media="screen">

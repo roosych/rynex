@@ -12,5 +12,5 @@
 <script defer src="/template/js/SplitText.js"></script>
 <script defer src="/template/js/ScrollTrigger.min.js"></script>
 <script defer src="/template/js/wow.min.js"></script>
-<script defer src="/template/js/function.js"></script>
+<script defer src="/template/js/function.js?v={{ filemtime(public_path('template/js/function.js')) }}"></script>
 @stack('scripts')
