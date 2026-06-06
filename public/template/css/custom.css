@@ -309,6 +309,12 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	/* Safety net: auto-hide even if JS fails to run, so it never blocks the page */
+	animation: preloader-fallback-hide 0s linear 5s forwards;
+}
+
+@keyframes preloader-fallback-hide{
+	to{ opacity: 0; visibility: hidden; }
 }
 
 .loading-container,

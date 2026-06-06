@@ -4,9 +4,10 @@
 	var $window = $(window); 
 	var $body = $('body'); 
 
-	/* Preloader Effect */
-	$window.on('load', function(){
-		$(".preloader").fadeOut(600);
+	/* Preloader Effect — hide as soon as the DOM is ready instead of waiting
+	   for window.load (every image/video), which otherwise blocks LCP. */
+	$(function(){
+		$(".preloader").fadeOut(300);
 	});
 
 	/* Sticky Header */	
