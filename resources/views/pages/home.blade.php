@@ -43,7 +43,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
     <div class="hero">
         <div class="hero-section hero-bg-image hero-video bg-section dark-section">
             <div class="hero-bg-video">
-                <video autoplay muted loop id="myVideo" aria-hidden="true"><source src="/template/images/template/bg3.mp4" type="video/mp4"><track kind="captions" src="/template/images/template/bg3.vtt" srclang="en" label="English"></video>
+                <video autoplay muted loop playsinline id="myVideo" aria-hidden="true" preload="none" poster="/template/images/hero-bg-2.jpg"><source data-src="/template/images/template/bg3.mp4" type="video/mp4"><track kind="captions" src="/template/images/template/bg3.vtt" srclang="en" label="English"></video>
             </div>
             <div class="container">
                 <div class="row align-items-center">
@@ -63,6 +63,19 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
             </div>
         </div>
     </div>
+
+    {{-- Load the heavy background video only after the page has loaded, so it
+         doesn't compete with the hero image (LCP) for bandwidth. --}}
+    @push('scripts')
+    <script>
+    window.addEventListener('load', function () {
+        var v = document.getElementById('myVideo');
+        if (!v) return;
+        var s = v.querySelector('source[data-src]');
+        if (s && !s.src) { s.src = s.getAttribute('data-src'); v.load(); }
+    });
+    </script>
+    @endpush
 
     {{-- Hero CTA Box --}}
     <div class="hero-cta-box">

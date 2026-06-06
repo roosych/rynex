@@ -42,6 +42,8 @@
 <meta name="twitter:image" content="{{ $ogImage }}">
 <meta name="twitter:image:alt" content="{{ $ogImageAlt }}">
 <link rel="shortcut icon" href="{{ $generalSettings->favicon ?: '/template/images/template/favicon.png' }}">
+{{-- Preload the hero LCP background image (set via CSS, otherwise discovered late) --}}
+<link rel="preload" as="image" href="/template/images/hero-bg-2.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -50,9 +52,7 @@
 <link rel="stylesheet" href="/template/css/swiper-bundle.min.css">
 <link href="/template/css/all.min.css" rel="stylesheet" media="screen">
 <link href="/template/css/animate.css" rel="stylesheet">
-<link rel="stylesheet" href="/template/css/magnific-popup.css">
 <link rel="stylesheet" href="/template/css/mousecursor.css">
-<link rel="stylesheet" href="/template/css/twentytwenty.css">
 <link href="/template/css/custom.css?v={{ filemtime(public_path('template/css/custom.css')) }}" rel="stylesheet" media="screen">
 @stack('styles')
 @stack('schema')
