@@ -3,7 +3,7 @@
         <div class="row section-row">
             <div class="col-lg-12">
                 <div class="section-title">
-                    <h3 class="wow fadeInUp">testimonials</h3>
+                    <span class="section-eyebrow wow fadeInUp">testimonials</span>
                     <h2 class="text-anime-style-3" data-cursor="-opaque">What our customers say about us</h2>
                     <p class="wow fadeInUp" data-wow-delay="0.2s">Real reviews from real homeowners. See why hundreds of families trust us with their appliance repairs.</p>
                 </div>

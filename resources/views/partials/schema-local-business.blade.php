@@ -1,6 +1,6 @@
 @php
 $schema = \Spatie\SchemaOrg\Schema::localBusiness()
-    ->name($generalSettings->company_name ?? 'Swift Fix Appliance Repair')
+    ->name($generalSettings->company_name)
     ->description($generalSettings->footer_about ?? 'Professional appliance repair service.')
     ->url(url('/'))
     ->telephone($generalSettings->phone_primary ?? '')

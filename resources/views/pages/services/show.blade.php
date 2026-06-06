@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@section('title', $service->meta_title ?: $service->title . ' in Dallas, TX | Swift Fix Appliance Repair')
-@section('meta_description', $service->meta_description ?: 'Professional ' . $service->title . ' in Dallas, TX. Certified technicians, same-day service, 90-day warranty. Call Swift Fix now.')
-@section('og_title', $service->meta_title ?: $service->title . ' in Dallas, TX | Swift Fix')
+@section('title', $service->meta_title ?: $service->title . ' in Dallas, TX | ' . $generalSettings->company_name)
+@section('meta_description', $service->meta_description ?: 'Professional ' . $service->title . ' in Dallas, TX. Certified technicians, same-day service, 90-day warranty. Call ' . $generalSettings->company_name . ' now.')
+@section('og_title', $service->meta_title ?: $service->title . ' in Dallas, TX | ' . $generalSettings->company_name)
 @section('og_description', $service->meta_description ?: 'Professional ' . $service->title . ' in Dallas, TX.')
 @section('og_type', 'article')
 @php $serviceImage = $service->og_image_url ?: null; @endphp
@@ -19,7 +19,7 @@ $serviceSchema = \Spatie\SchemaOrg\Schema::service()
     ->url(route('services.show', $service->slug))
     ->provider(
         \Spatie\SchemaOrg\Schema::localBusiness()
-            ->name($generalSettings->company_name ?? 'Swift Fix Appliance Repair')
+            ->name($generalSettings->company_name)
             ->telephone($generalSettings->phone_primary ?? '')
             ->url(url('/'))
     )
@@ -42,7 +42,7 @@ $serviceSchema = \Spatie\SchemaOrg\Schema::service()
                 <div class="col-lg-4">
                     <div class="page-single-sidebar">
                         <div class="page-catagery-list wow fadeInUp">
-                            <h3>Our Services</h3>
+                            <h2>Our Services</h2>
                             <ul>
                                 @foreach ($allServices as $s)
                                 <li><a href="{{ route('services.show', $s->slug) }}"

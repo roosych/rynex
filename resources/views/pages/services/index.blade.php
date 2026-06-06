@@ -11,6 +11,7 @@
 
     <section class="page-services" style="padding:80px 0;">
         <div class="container">
+            <h2 class="visually-hidden">Our Services</h2>
             <div class="row">
                 @foreach ($services as $index => $service)
                 <div class="col-lg-4 col-md-6">
@@ -45,12 +46,12 @@
                     <div class="process-video-box">
                         <div class="process-video-image">
                             <figure class="image-anime">
-                                <img src="/template/images/template/technicianatwork.jpg" alt="Swift Fix technician at work">
+                                <img src="/template/images/template/technicianatwork.jpg" alt="{{ $generalSettings->company_name }} technician at work">
                             </figure>
                         </div>
                         <div class="video-play-box wow fadeInUp">
                             <div class="video-play-content">
-                                <h3>trusted technicians</h3>
+                                <span class="video-play-eyebrow">trusted technicians</span>
                                 <h2>Repairs done right, the first time</h2>
                             </div>
                         </div>
@@ -59,7 +60,7 @@
                 <div class="col-lg-6">
                     <div class="our-process-content">
                         <div class="section-title">
-                            <div class="section-subtitle"><h3>our process</h3></div>
+                            <div class="section-subtitle"><span class="section-eyebrow">our process</span></div>
                             <h2>Fast, Professional Repair — Done Right the First Time</h2>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">From your first call to the completed repair, every step is built around speed, transparency, and results that last.</p>
                         </div>

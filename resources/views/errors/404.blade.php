@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Page Not Found | Swift Fix Appliance Repair')
+@section('title', 'Page Not Found | ' . $generalSettings->company_name)
 
 @section('content')
 

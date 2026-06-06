@@ -167,7 +167,7 @@
             <div class="{{ $showMap ? 'col-lg-7 order-lg-2 order-1' : 'col-lg-8' }}">
                 <div class="booking-form-box">
                     <div class="section-title section-title-center">
-                        <h3 class="wow fadeInUp">Book a service</h3>
+                        <span class="section-eyebrow wow fadeInUp">Book a service</span>
                         <h2 class="text-anime-style-3" data-cursor="-opaque">Ready to Get It Fixed?</h2>
                         <p class="wow fadeInUp" data-wow-delay="0.2s">Fill out the form and we'll get back to you fast. Most jobs are booked same or next day.</p>
                     </div>

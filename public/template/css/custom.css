@@ -389,7 +389,7 @@ body{
 	margin-bottom: 40px;
 }
 
-.section-title h3{
+.section-title .section-eyebrow{
 	display: inline-block;
 	position: relative;
 	font-family: var(--default-font);
@@ -401,7 +401,7 @@ body{
     margin-bottom: 10px;
 }
 
-.section-title h3::before{
+.section-title .section-eyebrow::before{
 	content: '';
     position: absolute;
     top: 50%;
@@ -413,7 +413,7 @@ body{
     height: 8px;
 }
 
-.bg-section.dark-section .section-title h3::before{
+.bg-section.dark-section .section-title .section-eyebrow::before{
 	background: var(--white-color);
 }
 
@@ -448,7 +448,7 @@ body{
 }
 
 .bg-section.dark-section .section-title p,
-.bg-section.dark-section .section-title h3,
+.bg-section.dark-section .section-title .section-eyebrow,
 .bg-section.dark-section .section-title h2,
 .bg-section.dark-section .section-title h1{
 	color: var(--white-color);
@@ -1076,7 +1076,7 @@ header.main-header .header-sticky.active{
 	max-width: 20px;
 }
 
-.hero-cta-item-title h3{
+.hero-cta-item-title h2{
 	font-size: 22px;
 }
 
@@ -1718,7 +1718,8 @@ header.main-header .header-sticky.active{
 	width: calc(100% - 80px);
 }
 
-.video-play-content h3{
+.video-play-content .video-play-eyebrow{
+	display: block;
 	font-size: 16px;
 	font-weight: 500;
 	color: var(--white-color);
@@ -3758,7 +3759,7 @@ header.main-header .header-sticky.active{
 	overflow: hidden;
 }
 
-.page-catagery-list h3{
+.page-catagery-list h2{
     font-size: 22px;
     text-transform: capitalize;
 	margin-bottom: 30px;
@@ -5590,7 +5591,7 @@ header.main-header .header-sticky.active{
 		right: -20px;
 	}
 
-	.hero-cta-item-title h3{
+	.hero-cta-item-title h2{
 		font-size: 20px;
 	}
 
@@ -5815,7 +5816,7 @@ header.main-header .header-sticky.active{
 		width: calc(100% - 65px);
 	}
 
-	.video-play-content h3{
+	.video-play-content .video-play-eyebrow{
 		margin-bottom: 5px;
 	}
 
@@ -6513,7 +6514,7 @@ header.main-header .header-sticky.active{
         margin-bottom: 30px;
     }
 
-    .page-catagery-list h3{
+    .page-catagery-list h2{
         font-size: 20px;
         margin-bottom: 20px;
     }
@@ -7129,7 +7130,7 @@ header.main-header .header-sticky.active{
 		max-width: 18px;
 	}
 
-	.hero-cta-item-title h3{
+	.hero-cta-item-title h2{
         font-size: 18px;
     }
 
@@ -7572,7 +7573,7 @@ header.main-header .header-sticky.active{
         font-size: 18px;
     }
 
-	.page-catagery-list h3{
+	.page-catagery-list h2{
         font-size: 18px;
     }
 

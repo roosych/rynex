@@ -43,7 +43,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
     <div class="hero">
         <div class="hero-section hero-bg-image hero-video bg-section dark-section">
             <div class="hero-bg-video">
-                <video autoplay muted loop id="myVideo"><source src="/template/images/template/bg3.mp4" type="video/mp4"></video>
+                <video autoplay muted loop id="myVideo" aria-hidden="true"><source src="/template/images/template/bg3.mp4" type="video/mp4"><track kind="captions" src="/template/images/template/bg3.vtt" srclang="en" label="English"></video>
             </div>
             <div class="container">
                 <div class="row align-items-center">
@@ -73,7 +73,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                         <div class="hero-cta-item wow fadeInUp">
                             <div class="hero-cta-item-header">
                                 <div class="icon-box"><img src="/template/images/icon-contact-now.svg" alt=""></div>
-                                <div class="hero-cta-item-title"><h3>Contact Us</h3></div>
+                                <div class="hero-cta-item-title"><h2>Contact Us</h2></div>
                             </div>
                             <div class="hero-cta-item-content">
                                 <p><a href="mailto:{{ $generalSettings->email }}"><span>Email:</span> {{ $generalSettings->email }}</a></p>
@@ -83,7 +83,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                         <div class="hero-cta-item wow fadeInUp" data-wow-delay="0.2s">
                             <div class="hero-cta-item-header">
                                 <div class="icon-box"><img src="/template/images/icon-location.svg" alt=""></div>
-                                <div class="hero-cta-item-title"><h3>Our Location</h3></div>
+                                <div class="hero-cta-item-title"><h2>Our Location</h2></div>
                             </div>
                             <div class="hero-cta-item-content">
                                 <p>{{ $generalSettings->address }}</p>
@@ -92,7 +92,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                         <div class="hero-cta-item wow fadeInUp" data-wow-delay="0.4s">
                             <div class="hero-cta-item-header">
                                 <div class="icon-box"><img src="/template/images/icon-watch.svg" alt=""></div>
-                                <div class="hero-cta-item-title"><h3>Working Hours</h3></div>
+                                <div class="hero-cta-item-title"><h2>Working Hours</h2></div>
                             </div>
                             <div class="hero-cta-item-content">
                                 <p>{{ $generalSettings->hours_weekday }}</p>
@@ -117,8 +117,8 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                             </figure>
                         </div>
                         <div class="contact-us-circle">
-                            <a href="{{ route('about') }}">
-                                <img src="/template/images/contact-us-circle.svg" alt="">
+                            <a href="{{ route('about') }}" aria-label="Learn more about us">
+                                <img src="/template/images/contact-us-circle.svg" alt="" aria-hidden="true">
                             </a>
                         </div>
                     </div>
@@ -126,7 +126,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                 <div class="col-lg-6">
                     <div class="about-us-content">
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">about us</h3>
+                            <span class="section-eyebrow wow fadeInUp">about us</span>
                             <h2 class="text-anime-style-3" data-cursor="-opaque">{{ $aboutSettings->heading }}</h2>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">{{ $aboutSettings->description }}</p>
                         </div>
@@ -176,7 +176,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
             <div class="row section-row align-items-center">
                 <div class="col-lg-12">
                     <div class="section-title section-title-center">
-                        <h3 class="wow fadeInUp">{{ $processSettings->services_subtitle }}</h3>
+                        <span class="section-eyebrow wow fadeInUp">{{ $processSettings->services_subtitle }}</span>
                         <h2 class="text-anime-style-3" data-cursor="-opaque">{{ $processSettings->services_title }}</h2>
                         <p class="wow fadeInUp" data-wow-delay="0.2s">{{ $processSettings->services_description }}</p>
                     </div>
@@ -221,7 +221,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                 <div class="col-lg-7">
                     <div class="why-choose-content">
                         <div class="section-title section-title-center">
-                            <h3 class="wow fadeInUp">Why choose us</h3>
+                            <span class="section-eyebrow wow fadeInUp">Why choose us</span>
                             <h2 class="text-anime-style-3" data-cursor="-opaque">{{ $processSettings->why_heading }}</h2>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">{{ $processSettings->why_description }}</p>
                         </div>
@@ -268,7 +268,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                         </div>
                         <div class="video-play-box wow fadeInUp" data-wow-delay="0.2s">
                             <div class="video-play-content">
-                                <h3>On every job</h3>
+                                <span class="video-play-eyebrow">On every job</span>
                                 <h2>Repairs done right the first time</h2>
                             </div>
                         </div>
@@ -277,7 +277,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                 <div class="col-lg-6">
                     <div class="our-process-content">
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">Our process</h3>
+                            <span class="section-eyebrow wow fadeInUp">Our process</span>
                             <h2 class="text-anime-style-3" data-cursor="-opaque">{{ $processSettings->process_heading }}</h2>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">{{ $processSettings->process_description }}</p>
                         </div>
@@ -310,7 +310,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                 <div class="col-lg-7">
                     <div class="how-we-work-content">
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">How we work</h3>
+                            <span class="section-eyebrow wow fadeInUp">How we work</span>
                             <h2 class="text-anime-style-3" data-cursor="-opaque">{{ $processSettings->how_work_heading }}</h2>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">{{ $processSettings->how_work_description }}</p>
                         </div>
@@ -367,7 +367,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
             <div class="row section-row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">our benefits</h3>
+                        <span class="section-eyebrow wow fadeInUp">our benefits</span>
                         <h2 class="text-anime-style-3" data-cursor="-opaque">{{ $benefitsSettings->heading }}</h2>
                         <p class="wow fadeInUp" data-wow-delay="0.2s">{{ $benefitsSettings->description }}</p>
                     </div>
@@ -421,7 +421,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
             <div class="row section-row">
                 <div class="col-lg-12">
                     <div class="section-title section-title-center">
-                        <h3 class="wow fadeInUp">our ratings</h3>
+                        <span class="section-eyebrow wow fadeInUp">our ratings</span>
                         <h2 class="text-anime-style-3" data-cursor="-opaque">Top-rated appliance repair near you</h2>
                         <p class="wow fadeInUp" data-wow-delay="0.2s">Don't just take our word for it — check what homeowners say on the platforms they trust most.</p>
                     </div>
@@ -471,7 +471,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                 <div class="col-lg-6">
                     <div class="our-faqs-content">
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">frequently asked questions</h3>
+                            <span class="section-eyebrow wow fadeInUp">frequently asked questions</span>
                             <h2 class="text-anime-style-3" data-cursor="-opaque">Common questions about appliance repair</h2>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">Have questions about our repair services? Find quick, honest answers below.</p>
                         </div>
@@ -513,7 +513,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
             <div class="row section-row align-items-center">
                 <div class="col-lg-12">
                     <div class="section-title section-title-center">
-                        <h3 class="wow fadeInUp">{{ $processSettings->blog_subtitle }}</h3>
+                        <span class="section-eyebrow wow fadeInUp">{{ $processSettings->blog_subtitle }}</span>
                         <h2 class="text-anime-style-3" data-cursor="-opaque">{{ $processSettings->blog_title }}</h2>
                         <p class="wow fadeInUp" data-wow-delay="0.2s">{{ $processSettings->blog_description }}</p>
                     </div>
@@ -572,7 +572,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                 <div class="col-lg-7 order-lg-2 order-1">
                     <div class="booking-form-box">
                         <div class="section-title section-title-center">
-                            <h3 class="wow fadeInUp">Book a service</h3>
+                            <span class="section-eyebrow wow fadeInUp">Book a service</span>
                             <h2 class="text-anime-style-3" data-cursor="-opaque">Ready to Get It Fixed?</h2>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">Fill out the form and we'll get back to you fast. Most jobs are booked same or next day.</p>
                         </div>

@@ -21,8 +21,8 @@
                             </figure>
                         </div>
                         <div class="contact-us-circle">
-                            <a href="{{ route('booking') }}">
-                                <img src="/template/images/contact-us-circle.svg" alt="">
+                            <a href="{{ route('booking') }}" aria-label="Book a service">
+                                <img src="/template/images/contact-us-circle.svg" alt="" aria-hidden="true">
                             </a>
                         </div>
                     </div>
@@ -30,7 +30,7 @@
                 <div class="col-lg-6">
                     <div class="about-us-content">
                         <div class="section-title">
-                            <h3 class="wow fadeInUp">about us</h3>
+                            <span class="section-eyebrow wow fadeInUp">about us</span>
                             <h2 class="text-anime-style-3" data-cursor="-opaque">{{ $aboutSettings->heading }}</h2>
                             <p class="wow fadeInUp" data-wow-delay="0.2s">{{ $aboutSettings->description }}</p>
                         </div>
@@ -80,7 +80,7 @@
             <div class="row section-row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">Our Mission / Vision</h3>
+                        <span class="section-eyebrow wow fadeInUp">Our Mission / Vision</span>
                         <h2 class="text-anime-style-3" data-cursor="-opaque">Built on Trust. Driven by Quality. Backed by Warranty.</h2>
                         <p class="wow fadeInUp" data-wow-delay="0.2s">We believe every homeowner deserves fast, honest appliance repair at a fair price — without the runaround.</p>
                     </div>
@@ -125,7 +125,7 @@
             <div class="row section-row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h3 class="wow fadeInUp">our benefits</h3>
+                        <span class="section-eyebrow wow fadeInUp">our benefits</span>
                         <h2 class="text-anime-style-3" data-cursor="-opaque">{{ $benefitsSettings->heading }}</h2>
                         <p class="wow fadeInUp" data-wow-delay="0.2s">{{ $benefitsSettings->description }}</p>
                     </div>

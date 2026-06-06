@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title', $post->meta_title ?: (($post['title'] ?? 'Blog Post') . ' | Swift Fix Blog'))
-@section('meta_description', $post['meta_description'] ?? 'Appliance repair tips and advice from Swift Fix technicians.')
-@section('og_title', $post->meta_title ?: ($post['title'] ?? 'Swift Fix Blog'))
-@section('og_description', $post['meta_description'] ?? 'Appliance repair tips and advice from Swift Fix technicians.')
+@section('title', $post->meta_title ?: (($post['title'] ?? 'Blog Post') . ' | ' . $generalSettings->company_name . ' Blog'))
+@section('meta_description', $post['meta_description'] ?? ('Appliance repair tips and advice from ' . $generalSettings->company_name . ' technicians.'))
+@section('og_title', $post->meta_title ?: ($post['title'] ?? ($generalSettings->company_name . ' Blog')))
+@section('og_description', $post['meta_description'] ?? ('Appliance repair tips and advice from ' . $generalSettings->company_name . ' technicians.'))
 @section('og_type', 'article')
 @php $postImage = $post->og_image_url ?: null; @endphp
 @if($postImage)
@@ -21,12 +21,12 @@ $articleSchema = \Spatie\SchemaOrg\Schema::blogPosting()
     ->dateModified($post->updated_at)
     ->author(
         \Spatie\SchemaOrg\Schema::organization()
-            ->name($generalSettings->company_name ?? 'Swift Fix Appliance Repair')
+            ->name($generalSettings->company_name)
             ->url(url('/'))
     )
     ->publisher(
         \Spatie\SchemaOrg\Schema::organization()
-            ->name($generalSettings->company_name ?? 'Swift Fix Appliance Repair')
+            ->name($generalSettings->company_name)
             ->url(url('/'))
     );
 if ($postImage) {

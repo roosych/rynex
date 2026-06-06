@@ -5,7 +5,7 @@
         <div class="row section-row">
             <div class="col-lg-12">
                 <div class="section-title section-title-center">
-                    <h3 class="wow fadeInUp">our brands</h3>
+                    <span class="section-eyebrow wow fadeInUp">our brands</span>
                     <h2 class="text-anime-style-3" data-cursor="-opaque">We Repair All Major Brands</h2>
                     <p class="wow fadeInUp" data-wow-delay="0.2s">From everyday essentials to high-end appliances, our technicians are trained and equipped to service every major brand.</p>
                 </div>
