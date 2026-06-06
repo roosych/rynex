@@ -30,4 +30,17 @@ class GeneralSettings extends Settings
     {
         return 'general';
     }
+
+    /**
+     * The map iframe src. Coordinates take priority; if they're not set,
+     * fall back to a manually pasted Google Maps embed URL.
+     */
+    public function mapEmbedSrc(): string
+    {
+        if (filled($this->latitude) && filled($this->longitude)) {
+            return 'https://www.google.com/maps?q=' . trim($this->latitude) . ',' . trim($this->longitude) . '&output=embed';
+        }
+
+        return $this->map_embed_url;
+    }
 }

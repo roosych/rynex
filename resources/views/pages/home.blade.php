@@ -565,7 +565,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                             </div>
                         </div>
                         <div class="google-map-iframe">
-                            <iframe src="{{ $generalSettings->map_embed_url }}" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="{{ $generalSettings->mapEmbedSrc() }}" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
