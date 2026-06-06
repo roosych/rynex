@@ -86,7 +86,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                                 <div class="hero-cta-item-title"><h3>Our Location</h3></div>
                             </div>
                             <div class="hero-cta-item-content">
-                                <p>Serving Dallas, TX and surrounding cities</p>
+                                <p>{{ $generalSettings->address }}</p>
                             </div>
                         </div>
                         <div class="hero-cta-item wow fadeInUp" data-wow-delay="0.4s">

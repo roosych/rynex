@@ -19,6 +19,7 @@
             <div class="col-lg-3 col-md-5">
                 <div class="footer-links">
                     <h3>contact us</h3>
+                    @if (filled($generalSettings->phone_primary))
                     <div class="footer-contact-item">
                         <div class="icon-box"><img src="/template/images/icon-phone.svg" alt=""></div>
                         <div class="footer-contact-content">
@@ -26,6 +27,8 @@
                             <p><a href="tel:{{ $generalSettings->phone_primary }}">{{ $generalSettings->phone_primary }}</a></p>
                         </div>
                     </div>
+                    @endif
+                    @if (filled($generalSettings->phone_secondary))
                     <div class="footer-contact-item">
                         <div class="icon-box"><img src="/template/images/icon-headphone.svg" alt=""></div>
                         <div class="footer-contact-content">
@@ -33,6 +36,7 @@
                             <p><a href="tel:{{ $generalSettings->phone_secondary }}">{{ $generalSettings->phone_secondary }}</a></p>
                         </div>
                     </div>
+                    @endif
                 </div>
             </div>
 
