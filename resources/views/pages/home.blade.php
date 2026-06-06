@@ -43,7 +43,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
     <div class="hero">
         <div class="hero-section hero-bg-image hero-video bg-section dark-section">
             <div class="hero-bg-video">
-                <video autoplay muted loop playsinline id="myVideo" aria-hidden="true" preload="none" poster="/template/images/hero-bg-2.jpg"><source data-src="/template/images/template/bg3.mp4" type="video/mp4"><track kind="captions" src="/template/images/template/bg3.vtt" srclang="en" label="English"></video>
+                <video autoplay muted loop playsinline id="myVideo" aria-hidden="true" preload="none" poster="/template/images/template/process.webp"><source data-src="/template/images/template/bg3.mp4" type="video/mp4"><track kind="captions" src="/template/images/template/bg3.vtt" srclang="en" label="English"></video>
             </div>
             <div class="container">
                 <div class="row align-items-center">
