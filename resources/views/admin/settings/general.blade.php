@@ -57,6 +57,13 @@
                         <a href="https://maps.google.com" target="_blank" rel="noopener">maps.google.com</a>
                         — правый клик по точке → «Что здесь?» — скопируй координаты
                     </div>
+                    <div class="mb-4">
+                        <label class="admin-form-label">Map Zoom</label>
+                        <input type="text" name="map_zoom" class="form-control"
+                               value="{{ old('map_zoom', $settings->map_zoom) }}"
+                               placeholder="e.g. 15">
+                        <div class="admin-form-hint">От 1 (весь мир) до 21 (здания). Для адреса обычно 14–17.</div>
+                    </div>
                 </div>
             </div>
         </div>

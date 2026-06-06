@@ -18,6 +18,7 @@ class GeneralSettings extends Settings
     public string $address           = 'Chicago, IL';
     public string $latitude          = '41.8781';
     public string $longitude         = '-87.6298';
+    public string $map_zoom          = '15';
     public string $hours_weekday     = 'Monday - Friday : 8:00 am to 7:00 pm';
     public string $hours_saturday    = 'Saturday : 9:00 am to 4:00 pm';
     public string $footer_about      = 'Rynex Fix is a local appliance repair company. Fast, honest service — backed by a warranty.';
@@ -38,7 +39,13 @@ class GeneralSettings extends Settings
     public function mapEmbedSrc(): string
     {
         if (filled($this->latitude) && filled($this->longitude)) {
-            return 'https://www.google.com/maps?q=' . trim($this->latitude) . ',' . trim($this->longitude) . '&output=embed';
+            $url = 'https://www.google.com/maps?q=' . trim($this->latitude) . ',' . trim($this->longitude) . '&output=embed';
+
+            if (filled($this->map_zoom)) {
+                $url .= '&z=' . trim($this->map_zoom);
+            }
+
+            return $url;
         }
 
         return $this->map_embed_url;
