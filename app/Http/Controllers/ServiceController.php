@@ -22,6 +22,8 @@ class ServiceController extends Controller
         $zipCodes    = ZipCode::where('is_active', true)->orderBy('sort_order')->orderBy('code')->get();
         $brands      = Brand::where('is_active', true)->orderBy('sort_order')->orderBy('name')->get();
 
-        return view('pages.services.show', compact('service', 'allServices', 'zipCodes', 'brands'));
+        $services = $allServices;
+
+        return view('pages.services.show', compact('service', 'allServices', 'services', 'zipCodes', 'brands'));
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\BookingReceived;
 use App\Models\Booking;
 use App\Models\Brand;
+use App\Models\Service;
 use App\Models\ZipCode;
 use App\Settings\GeneralSettings;
 use Illuminate\Http\Request;
@@ -17,7 +18,8 @@ class BookingController extends Controller
     {
         $zipCodes = ZipCode::where('is_active', true)->orderBy('sort_order')->orderBy('code')->get();
         $brands   = Brand::where('is_active', true)->orderBy('sort_order')->orderBy('name')->get();
-        return view('pages.booking', compact('zipCodes', 'brands'));
+        $services = Service::where('is_active', true)->orderBy('sort_order')->get();
+        return view('pages.booking', compact('zipCodes', 'brands', 'services'));
     }
 
     public function store(Request $request)

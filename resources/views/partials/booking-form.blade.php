@@ -2,6 +2,7 @@
 
 @push('styles')
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" rel="stylesheet">
 <style>
     .contact-info { padding: 60px 0 30px; }
     .book-appointment { padding: 80px 0; margin-bottom: 100px; }
@@ -188,15 +189,15 @@
                             @csrf
                             <div class="row">
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="text" name="name" class="form-control" placeholder="Full Name Here" value="{{ old('name') }}" required>
+                                    <input type="text" name="name" class="form-control" placeholder="Full Name Here" value="{{ old('name') }}" required data-required-error="Please enter your name.">
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="text" id="phone_input" name="phone" class="form-control" placeholder="(555) 555-5555" value="{{ old('phone') }}" required>
+                                    <input type="text" id="phone_input" name="phone" class="form-control" placeholder="(555) 555-5555" value="{{ old('phone') }}" required data-required-error="Please enter your phone number.">
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group col-md-6 mb-4">
-                                    <select id="brand_select" name="brand" class="form-control" required>
+                                    <select id="brand_select" name="brand" class="form-control" required data-required-error="Please select a brand.">
                                         <option value="" disabled selected>Select brand</option>
                                         @foreach($brands as $brand)
                                         <option value="{{ $brand->name }}" {{ old('brand') == $brand->name ? 'selected' : '' }}>
@@ -207,20 +208,17 @@
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group col-md-6 mb-4">
-                                    <select id="service_select" name="service" class="form-control" required>
+                                    <select id="service_select" name="service" class="form-control" required data-required-error="Please select an appliance.">
                                         <option value="" disabled selected>Select appliance</option>
-                                        <option value="refrigerator_repair" {{ old('service') == 'refrigerator_repair' ? 'selected' : '' }}>Refrigerator Repair</option>
-                                        <option value="washer_repair" {{ old('service') == 'washer_repair' ? 'selected' : '' }}>Washer Repair</option>
-                                        <option value="dryer_repair" {{ old('service') == 'dryer_repair' ? 'selected' : '' }}>Dryer Repair</option>
-                                        <option value="dishwasher_repair" {{ old('service') == 'dishwasher_repair' ? 'selected' : '' }}>Dishwasher Repair</option>
-                                        <option value="oven_stove_repair" {{ old('service') == 'oven_stove_repair' ? 'selected' : '' }}>Oven & Stove Repair</option>
-                                        <option value="ac_hvac_repair" {{ old('service') == 'ac_hvac_repair' ? 'selected' : '' }}>AC / HVAC Repair</option>
-                                        <option value="other" {{ old('service') == 'other' ? 'selected' : '' }}>Other Appliance</option>
+                                        @foreach($services as $svc)
+                                        <option value="{{ $svc->title }}" {{ old('service') == $svc->title ? 'selected' : '' }}>{{ $svc->title }}</option>
+                                        @endforeach
+                                        <option value="Other Appliance" {{ old('service') == 'Other Appliance' ? 'selected' : '' }}>Other Appliance</option>
                                     </select>
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group col-md-6 mb-4">
-                                    <select id="zip_code_select" name="zip_code" class="form-control" required>
+                                    <select id="zip_code_select" name="zip_code" class="form-control" required data-required-error="Please select your ZIP code.">
                                         <option value="" disabled selected>Select ZIP Code</option>
                                         @foreach($zipCodes as $zip)
                                         <option value="{{ $zip->code }}" {{ old('zip_code') == $zip->code ? 'selected' : '' }}>
@@ -231,7 +229,7 @@
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group col-md-6 mb-4">
-                                    <input type="date" name="date" class="form-control" value="{{ old('date') }}" required>
+                                    <input type="text" id="date_input" name="date" class="form-control" placeholder="MM/DD/YYYY" value="{{ old('date') }}" required data-required-error="Please choose a preferred date." autocomplete="off">
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group col-md-12 mb-5">
@@ -271,6 +269,7 @@
 @push('scripts')
 <script defer src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/inputmask@5.0.9/dist/inputmask.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     // Open success modal if present
@@ -287,6 +286,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Phone mask — US format (555) 555-5555
     Inputmask('(999) 999-9999').mask(document.getElementById('phone_input'));
+
+    // Date picker — US format MM/DD/YYYY, consistent regardless of browser/OS locale
+    flatpickr('#date_input', {
+        dateFormat: 'm/d/Y',
+        minDate: 'today',
+        disableMobile: true,
+    });
 
     $('#service_select').select2({
         placeholder: 'Select appliance',
