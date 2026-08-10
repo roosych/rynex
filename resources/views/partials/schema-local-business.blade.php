@@ -8,8 +8,8 @@ $schema = \Spatie\SchemaOrg\Schema::localBusiness()
     ->address(
         \Spatie\SchemaOrg\Schema::postalAddress()
             ->streetAddress($generalSettings->address ?? '')
-            ->addressLocality('Dallas')
-            ->addressRegion('TX')
+            ->addressLocality('Chicago')
+            ->addressRegion('IL')
             ->addressCountry('US')
     )
     ->openingHoursSpecification([

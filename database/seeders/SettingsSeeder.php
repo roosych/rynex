@@ -13,7 +13,7 @@ class SettingsSeeder extends Seeder
 
         $rows = [
             // ── General ──────────────────────────────────────────
-            ['group' => 'general', 'name' => 'company_name',     'payload' => json_encode('Rynex Fix')],
+            ['group' => 'general', 'name' => 'company_name',     'payload' => json_encode('RynexFix')],
             ['group' => 'general', 'name' => 'tagline',          'payload' => json_encode('Appliance Repair')],
             ['group' => 'general', 'name' => 'phone_primary',    'payload' => json_encode('+1 (555) 123-4567')],
             ['group' => 'general', 'name' => 'phone_secondary',  'payload' => json_encode('+1 (555) 987-6543')],
@@ -24,7 +24,7 @@ class SettingsSeeder extends Seeder
             ['group' => 'general', 'name' => 'longitude',        'payload' => json_encode('-87.6298')],
             ['group' => 'general', 'name' => 'hours_weekday',    'payload' => json_encode('Monday - Friday : 8:00 am to 7:00 pm')],
             ['group' => 'general', 'name' => 'hours_saturday',   'payload' => json_encode('Saturday : 9:00 am to 4:00 pm')],
-            ['group' => 'general', 'name' => 'footer_about',     'payload' => json_encode('Rynex Fix is a local appliance repair company. Fast, honest service — backed by a warranty.')],
+            ['group' => 'general', 'name' => 'footer_about',     'payload' => json_encode('RynexFix is a local appliance repair company. Fast, honest service — backed by a warranty.')],
             ['group' => 'general', 'name' => 'social_facebook',  'payload' => json_encode('#')],
             ['group' => 'general', 'name' => 'social_instagram', 'payload' => json_encode('#')],
             ['group' => 'general', 'name' => 'social_yelp',      'payload' => json_encode('#')],
@@ -90,16 +90,16 @@ class SettingsSeeder extends Seeder
             ['group' => 'benefits', 'name' => 'b6_desc',     'payload' => json_encode('We come to your home — no hauling appliances to a shop')],
 
             // ── SEO (per-page meta) ───────────────────────────────
-            ['group' => 'seo', 'name' => 'home_title',          'payload' => json_encode('Appliance Repair in Chicago, IL | Same-Day Service | Rynex Fix')],
+            ['group' => 'seo', 'name' => 'home_title',          'payload' => json_encode('Appliance Repair in Chicago, IL | Same-Day Service | RynexFix')],
             ['group' => 'seo', 'name' => 'home_description',     'payload' => json_encode('Fast, affordable appliance repair in Chicago, IL. We fix refrigerators, washers, dryers, ovens & more. Certified technicians, same-day service, 90-day warranty.')],
-            ['group' => 'seo', 'name' => 'about_title',         'payload' => json_encode('About Rynex Fix | Appliance Repair Experts in Chicago, IL')],
-            ['group' => 'seo', 'name' => 'about_description',   'payload' => json_encode('Learn about Rynex Fix Appliance Repair — your trusted local appliance repair experts since 2012. Certified technicians, 90-day warranty, serving Chicago, IL.')],
-            ['group' => 'seo', 'name' => 'services_title',      'payload' => json_encode('Appliance Repair Services in Chicago, IL | Rynex Fix')],
-            ['group' => 'seo', 'name' => 'services_description','payload' => json_encode('Rynex Fix offers refrigerator, washer, dryer, dishwasher, oven, and AC repair in Chicago, IL. Same-day service, upfront pricing, 90-day warranty.')],
-            ['group' => 'seo', 'name' => 'blog_title',          'payload' => json_encode('Appliance Repair Tips & Guides | Rynex Fix Blog')],
-            ['group' => 'seo', 'name' => 'blog_description',    'payload' => json_encode('Rynex Fix Appliance Repair blog — tips, guides, and advice on keeping your home appliances running longer and saving money on repairs.')],
-            ['group' => 'seo', 'name' => 'booking_title',       'payload' => json_encode('Book Appliance Repair in Chicago, IL | Rynex Fix')],
-            ['group' => 'seo', 'name' => 'booking_description', 'payload' => json_encode('Book a same-day appliance repair with Rynex Fix in Chicago, IL. Fill out the form and we\'ll confirm your appointment fast. Certified technicians, 90-day warranty.')],
+            ['group' => 'seo', 'name' => 'about_title',         'payload' => json_encode('About RynexFix | Appliance Repair Experts in Chicago, IL')],
+            ['group' => 'seo', 'name' => 'about_description',   'payload' => json_encode('Learn about RynexFix Appliance Repair — your trusted local appliance repair experts since 2012. Certified technicians, 90-day warranty, serving Chicago, IL.')],
+            ['group' => 'seo', 'name' => 'services_title',      'payload' => json_encode('Appliance Repair Services in Chicago, IL | RynexFix')],
+            ['group' => 'seo', 'name' => 'services_description','payload' => json_encode('RynexFix offers refrigerator, washer, dryer, dishwasher, oven, and AC repair in Chicago, IL. Same-day service, upfront pricing, 90-day warranty.')],
+            ['group' => 'seo', 'name' => 'blog_title',          'payload' => json_encode('Appliance Repair Tips & Guides | RynexFix Blog')],
+            ['group' => 'seo', 'name' => 'blog_description',    'payload' => json_encode('RynexFix Appliance Repair blog — tips, guides, and advice on keeping your home appliances running longer and saving money on repairs.')],
+            ['group' => 'seo', 'name' => 'booking_title',       'payload' => json_encode('Book Appliance Repair in Chicago, IL | RynexFix')],
+            ['group' => 'seo', 'name' => 'booking_description', 'payload' => json_encode('Book a same-day appliance repair with RynexFix in Chicago, IL. Fill out the form and we\'ll confirm your appointment fast. Certified technicians, 90-day warranty.')],
         ];
 
         foreach ($rows as &$row) {

@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
         User::firstOrCreate(
             ['email' => 'admin@rynexfix.com'],
             [
-                'name'     => 'Rynex Fix Admin',
+                'name'     => 'RynexFix Admin',
                 'password' => Hash::make('admin123'),
             ]
         );

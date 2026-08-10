@@ -6,7 +6,7 @@ use Spatie\LaravelSettings\Settings;
 
 class GeneralSettings extends Settings
 {
-    public string $company_name      = 'Rynex Fix';
+    public string $company_name      = 'RynexFix';
     public string $tagline           = 'Appliance Repair';
     public string $logo              = '';
     public string $logo_white        = '';
@@ -21,7 +21,7 @@ class GeneralSettings extends Settings
     public string $map_zoom          = '15';
     public string $hours_weekday     = 'Monday - Friday : 8:00 am to 7:00 pm';
     public string $hours_saturday    = 'Saturday : 9:00 am to 4:00 pm';
-    public string $footer_about      = 'Rynex Fix is a local appliance repair company. Fast, honest service — backed by a warranty.';
+    public string $footer_about      = 'RynexFix is a local appliance repair company. Fast, honest service — backed by a warranty.';
     public string $social_facebook   = '#';
     public string $social_instagram  = '#';
     public string $social_yelp       = '#';

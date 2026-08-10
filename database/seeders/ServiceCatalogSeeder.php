@@ -246,7 +246,7 @@ class ServiceCatalogSeeder extends Seeder
                 ['slug' => $slug],
                 [
                     'title'            => $item['title'],
-                    'meta_description' => 'Professional ' . $item['title'] . ' in Chicago, IL. Rynex Fix technicians fix all major brands same day — backed by a 90-day warranty.',
+                    'meta_description' => 'Professional ' . $item['title'] . ' in Chicago, IL. RynexFix technicians fix all major brands same day — backed by a 90-day warranty.',
                     'excerpt'          => $item['excerpt'],
                     'content'          => $content,
                     'sort_order'       => $index + 1,

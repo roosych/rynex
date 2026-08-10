@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title', $service->meta_title ?: $service->title . ' in Dallas, TX | ' . $generalSettings->company_name)
-@section('meta_description', $service->meta_description ?: 'Professional ' . $service->title . ' in Dallas, TX. Certified technicians, same-day service, 90-day warranty. Call ' . $generalSettings->company_name . ' now.')
-@section('og_title', $service->meta_title ?: $service->title . ' in Dallas, TX | ' . $generalSettings->company_name)
-@section('og_description', $service->meta_description ?: 'Professional ' . $service->title . ' in Dallas, TX.')
+@section('title', $service->meta_title ?: $service->title . ' in Chicago, IL | ' . $generalSettings->company_name)
+@section('meta_description', $service->meta_description ?: 'Professional ' . $service->title . ' in Chicago, IL. Certified technicians, same-day service, 90-day warranty. Call ' . $generalSettings->company_name . ' now.')
+@section('og_title', $service->meta_title ?: $service->title . ' in Chicago, IL | ' . $generalSettings->company_name)
+@section('og_description', $service->meta_description ?: 'Professional ' . $service->title . ' in Chicago, IL.')
 @section('og_type', 'article')
 @php $serviceImage = $service->og_image_url ?: null; @endphp
 @if($serviceImage)
@@ -24,7 +24,7 @@ $serviceSchema = \Spatie\SchemaOrg\Schema::service()
             ->url(url('/'))
     )
     ->areaServed(
-        \Spatie\SchemaOrg\Schema::city()->name('Dallas, TX')
+        \Spatie\SchemaOrg\Schema::city()->name('Chicago, IL')
     );
 @endphp
 {!! $serviceSchema->toScript() !!}

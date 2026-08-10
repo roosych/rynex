@@ -23,7 +23,7 @@ class AboutSettings extends Settings
     public string $mission_title = 'our mission';
     public string $mission_text  = 'To deliver fast, reliable appliance repair with upfront pricing and zero surprises — every single time.';
     public string $vision_title  = 'our vision';
-    public string $vision_text   = 'To be the most trusted appliance repair company in Dallas — known for honesty, speed, and lasting results.';
+    public string $vision_text   = 'To be the most trusted appliance repair company in Chicago — known for honesty, speed, and lasting results.';
     public string $values_title  = 'our values';
     public string $values_text   = 'Integrity, transparency, and craftsmanship. We treat every home like our own and every repair like it matters.';
 

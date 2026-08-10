@@ -29,7 +29,7 @@ class PostSeeder extends Seeder
                 <p>Clicking, buzzing, rattling, or humming that\'s louder than usual often points to a failing compressor, condenser fan, or evaporator fan.</p>
                 <h2>5. There\'s Water Pooling Inside or Underneath</h2>
                 <p>Leaking water is typically caused by a clogged defrost drain or a faulty water inlet valve. Left unchecked, it can cause floor damage and mold growth.</p>
-                <p><strong>If you notice any of these signs, don\'t wait.</strong> Call Rynex Fix and we\'ll send a technician the same day to diagnose the problem before it becomes a full breakdown.</p>',
+                <p><strong>If you notice any of these signs, don\'t wait.</strong> Call RynexFix and we\'ll send a technician the same day to diagnose the problem before it becomes a full breakdown.</p>',
             ],
             [
                 'title'            => 'Is Your Washer Shaking Too Much? What It Really Means',
@@ -71,7 +71,7 @@ class PostSeeder extends Seeder
                 <p>The rubber gasket around the door can accumulate mold and debris. Wipe it down monthly with a damp cloth to prevent leaks and keep the seal flexible.</p>
                 <h2>Run a Cleaning Cycle Once a Month</h2>
                 <p>Use a dishwasher cleaner tablet or a cup of white vinegar in the bottom rack on an empty hot cycle. This removes mineral buildup and keeps the interior fresh.</p>
-                <p><strong>Even with good maintenance</strong>, dishwashers eventually develop issues. If yours is leaking, not cleaning properly, or making unusual sounds, call Rynex Fix — we\'ll be there the same day.</p>',
+                <p><strong>Even with good maintenance</strong>, dishwashers eventually develop issues. If yours is leaking, not cleaning properly, or making unusual sounds, call RynexFix — we\'ll be there the same day.</p>',
             ],
             [
                 'title'            => 'Why Is My Refrigerator Not Cooling? Common Causes & Fixes',
@@ -92,7 +92,7 @@ class PostSeeder extends Seeder
                 <p>Low refrigerant causes gradual cooling loss. Signs include the fridge running non-stop and frost forming in unexpected places. Refrigerant work requires a certified technician.</p>
                 <h2>Blocked Air Vents</h2>
                 <p>Sometimes the fix is as simple as rearranging food. Overpacked shelves can block the internal air vents that circulate cold air between compartments.</p>
-                <p><strong>If basic checks don\'t resolve the issue</strong>, call Rynex Fix. We diagnose refrigerators same-day and carry most common parts in our trucks.</p>',
+                <p><strong>If basic checks don\'t resolve the issue</strong>, call RynexFix. We diagnose refrigerators same-day and carry most common parts in our trucks.</p>',
             ],
             [
                 'title'            => '5 Signs Your Washer Needs a Repair (Don\'t Ignore These)',
@@ -113,12 +113,12 @@ class PostSeeder extends Seeder
                 <p>A musty odor — especially in front-loaders — often means mold has built up in the door seal or drum. This can worsen over time and transfer to your clothes.</p>
                 <h2>5. Excessive Noise or Vibration</h2>
                 <p>Banging, grinding, or unusual vibration during the spin cycle is a sign of worn bearings, damaged shock absorbers, or a failing motor.</p>
-                <p><strong>Don\'t wait until it stops working entirely.</strong> Call Rynex Fix for same-day washer repair — we\'ll diagnose the issue and give you an honest upfront quote.</p>',
+                <p><strong>Don\'t wait until it stops working entirely.</strong> Call RynexFix for same-day washer repair — we\'ll diagnose the issue and give you an honest upfront quote.</p>',
             ],
             [
                 'title'            => 'Gas vs. Electric Oven: Which Is Cheaper to Run and Repair?',
                 'slug'             => 'gas-vs-electric-oven-cost-repair',
-                'meta_description' => 'Gas or electric oven — which costs less to run and repair? A practical breakdown for Chicago homeowners from the Rynex Fix technicians.',
+                'meta_description' => 'Gas or electric oven — which costs less to run and repair? A practical breakdown for Chicago homeowners from the RynexFix technicians.',
                 'category'         => 'Oven',
                 'published_at'     => '2025-03-28',
                 'image'            => '/template/images/template/service-maintenance-worker-repairing.jpg',
@@ -134,7 +134,7 @@ class PostSeeder extends Seeder
                 <p>Gas oven repairs are usually a little cheaper on average because the failure points are simpler — but a gas leak or valve issue should always be handled by a certified technician for safety.</p>
                 <h2>The Bottom Line</h2>
                 <p>If your oven is under 10 years old, repair is almost always the smarter choice over replacement — regardless of fuel type.</p>
-                <p><strong>Not sure whether to repair or replace?</strong> Call Rynex Fix for an honest same-day assessment anywhere across Chicago.</p>',
+                <p><strong>Not sure whether to repair or replace?</strong> Call RynexFix for an honest same-day assessment anywhere across Chicago.</p>',
             ],
         ];
 
