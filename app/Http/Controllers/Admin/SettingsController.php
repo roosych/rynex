@@ -25,6 +25,13 @@ class SettingsController extends Controller
         'seo'     => ['default_og_image'],
     ];
 
+    /**
+     * Fields that must be served from a public/ path rather than /storage/,
+     * because /storage/ is disallowed in robots.txt and would never get crawled
+     * (e.g. Google won't index a favicon it's blocked from fetching).
+     */
+    private array $publicUploadFields = ['favicon'];
+
     public function index(): RedirectResponse
     {
         return redirect()->route('admin.settings.edit', 'general');
@@ -52,8 +59,16 @@ class SettingsController extends Controller
         foreach ($uploadFields as $field) {
             $fileKey = $field . '_file';
             if ($request->hasFile($fileKey) && $request->file($fileKey)->isValid()) {
-                $path = $request->file($fileKey)->store('settings', 'public');
-                $settings->$field = Storage::url($path);
+                $file = $request->file($fileKey);
+
+                if (in_array($field, $this->publicUploadFields)) {
+                    $filename = $file->hashName();
+                    $file->move(public_path('uploads'), $filename);
+                    $settings->$field = '/uploads/' . $filename;
+                } else {
+                    $path = $file->store('settings', 'public');
+                    $settings->$field = Storage::url($path);
+                }
             }
         }
 

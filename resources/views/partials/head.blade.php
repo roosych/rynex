@@ -41,6 +41,7 @@
 <meta name="twitter:description" content="@yield('og_description', 'Fast, affordable appliance repair near you.')">
 <meta name="twitter:image" content="{{ $ogImage }}">
 <meta name="twitter:image:alt" content="{{ $ogImageAlt }}">
+<link rel="icon" type="image/png" href="{{ $generalSettings->favicon ?: '/template/images/template/favicon.png' }}">
 <link rel="shortcut icon" href="{{ $generalSettings->favicon ?: '/template/images/template/favicon.png' }}">
 {{-- Preload the hero LCP background image (set via CSS, otherwise discovered late) --}}
 <link rel="preload" as="image" href="/template/images/hero-bg-2.jpg" fetchpriority="high">
