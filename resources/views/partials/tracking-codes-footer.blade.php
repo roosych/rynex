@@ -1,0 +1,1 @@
+{!! $codesSettings->footer_code !!}

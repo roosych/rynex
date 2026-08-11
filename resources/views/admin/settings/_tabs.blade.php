@@ -6,6 +6,7 @@
         'process'  => ['label' => 'Sections','icon' => 'fa-layer-group'],
         'benefits' => ['label' => 'Benefits','icon' => 'fa-list-check'],
         'seo'      => ['label' => 'SEO',     'icon' => 'fa-magnifying-glass'],
+        'codes'    => ['label' => 'Codes',   'icon' => 'fa-code'],
     ];
 @endphp
 

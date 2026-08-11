@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Settings\AboutSettings;
 use App\Settings\BenefitsSettings;
+use App\Settings\CodesSettings;
 use App\Settings\GeneralSettings;
 use App\Settings\HeroSettings;
 use App\Settings\ProcessSettings;
@@ -30,6 +31,7 @@ class AppServiceProvider extends ServiceProvider
             View::share('processSettings', app(ProcessSettings::class));
             View::share('benefitsSettings', app(BenefitsSettings::class));
             View::share('seoSettings',      app(SeoSettings::class));
+            View::share('codesSettings',    app(CodesSettings::class));
         }
 
         // Provide active brands to the trusted-brands slider partial wherever it's included

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Settings\AboutSettings;
 use App\Settings\BenefitsSettings;
+use App\Settings\CodesSettings;
 use App\Settings\GeneralSettings;
 use App\Settings\HeroSettings;
 use App\Settings\ProcessSettings;
@@ -17,7 +18,7 @@ use ReflectionProperty;
 
 class SettingsController extends Controller
 {
-    private array $groups = ['general', 'hero', 'about', 'process', 'benefits', 'seo'];
+    private array $groups = ['general', 'hero', 'about', 'process', 'benefits', 'seo', 'codes'];
 
     /** Settings fields uploaded as files, keyed by group. Input name is "{field}_file". */
     private array $uploadFields = [
@@ -108,6 +109,7 @@ class SettingsController extends Controller
             'process'  => ProcessSettings::class,
             'benefits' => BenefitsSettings::class,
             'seo'      => SeoSettings::class,
+            'codes'    => CodesSettings::class,
         };
     }
 }
