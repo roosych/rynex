@@ -5,4 +5,4 @@ Disallow: /admin/
 Disallow: /admin/login
 Disallow: /storage/
 
-Sitemap: /sitemap.xml
+Sitemap: https://rynexfix.com/sitemap.xml

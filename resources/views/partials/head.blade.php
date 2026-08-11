@@ -17,14 +17,20 @@
         $ogImage = url($ogImage);
     }
     $ogImageAlt = trim($__env->yieldContent('og_image_alt', $generalSettings->company_name));
+
+    // Canonical URL is built from APP_URL (the single canonical host), never from the
+    // request's Host header — otherwise a page crawled via www would self-report a
+    // www canonical, and Google picks whichever host it sees most instead of ours.
+    $canonicalPath = '/' . trim(request()->path(), '/');
+    $canonicalUrl  = trim($__env->yieldContent('canonical', rtrim(config('app.url'), '/') . $canonicalPath));
 @endphp
 
 {{-- Canonical --}}
-<link rel="canonical" href="@yield('canonical', request()->url())">
+<link rel="canonical" href="{{ $canonicalUrl }}">
 
 {{-- Open Graph --}}
 <meta property="og:type" content="@yield('og_type', 'website')">
-<meta property="og:url" content="@yield('canonical', request()->url())">
+<meta property="og:url" content="{{ $canonicalUrl }}">
 <meta property="og:title" content="@yield('og_title', $generalSettings->company_name)">
 <meta property="og:description" content="@yield('og_description', 'Fast, affordable appliance repair near you. Certified technicians, same-day service, warranty included.')">
 <meta property="og:image" content="{{ $ogImage }}">
@@ -42,7 +48,6 @@
 <meta name="twitter:image" content="{{ $ogImage }}">
 <meta name="twitter:image:alt" content="{{ $ogImageAlt }}">
 <link rel="icon" type="image/png" href="{{ $generalSettings->favicon ?: '/template/images/template/favicon.png' }}">
-<link rel="shortcut icon" href="{{ $generalSettings->favicon ?: '/template/images/template/favicon.png' }}">
 {{-- Preload the hero LCP background image (set via CSS, otherwise discovered late) --}}
 <link rel="preload" as="image" href="/template/images/hero-bg-2.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com/">

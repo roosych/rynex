@@ -12,6 +12,7 @@ use App\Settings\SeoSettings;
 use App\Models\Brand;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,6 +23,18 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Paginator::defaultView('vendor.pagination.bootstrap-5');
+
+        // Pin url()/route()/asset() generation to APP_URL instead of the request's
+        // Host header, so sitemap/JSON-LD/OG URLs stay on the canonical host (non-www)
+        // even if the app is reachable on a www alias.
+        $appUrl = config('app.url');
+        if (filled($appUrl)) {
+            URL::forceRootUrl($appUrl);
+
+            if ($scheme = parse_url($appUrl, PHP_URL_SCHEME)) {
+                URL::forceScheme($scheme);
+            }
+        }
 
         // Share settings with all views only after the settings table exists
         if (Schema::hasTable('settings')) {
