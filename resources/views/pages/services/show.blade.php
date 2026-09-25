@@ -41,6 +41,13 @@ $serviceSchema = \Spatie\SchemaOrg\Schema::service()
                 {{-- Sidebar --}}
                 <div class="col-lg-4">
                     <div class="page-single-sidebar">
+                        <div class="page-catagery-list wow fadeInUp" style="text-align:center;">
+                            <h2>Need Help Now?</h2>
+                            <p style="margin-bottom:20px;">Call now for same-day {{ $service->title }} in Chicago, IL.</p>
+                            <a href="tel:{{ preg_replace('/[^\d+]/', '', $generalSettings->phone_primary) }}" class="btn-default">
+                                <span>Call {{ $generalSettings->phone_primary }}</span>
+                            </a>
+                        </div>
                         <div class="page-catagery-list wow fadeInUp">
                             <h2>Our Services</h2>
                             <ul>
