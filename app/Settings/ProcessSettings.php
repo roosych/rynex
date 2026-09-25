@@ -14,7 +14,7 @@ class ProcessSettings extends Settings
     public string $why_feature_2_body  = 'Our techs are trained on all major brands — Samsung, LG, Whirlpool, GE, Bosch, and more. We get it right the first time.';
 
     public string $process_heading     = 'Honest repairs done right — every single time';
-    public string $process_description = "No upselling. No surprise fees. Just fast, quality work backed by our 90-day repair warranty.";
+    public string $process_description = "No upselling. No surprise fees. Just fast, quality work we stand behind.";
 
     public string $how_work_heading     = 'Simple. Fast. Done Right.';
     public string $how_work_description = "Book online or call us — our tech shows up, gives you a straight price, and gets it fixed. No runaround.";
@@ -23,7 +23,7 @@ class ProcessSettings extends Settings
     public string $step_2_title         = 'Technician comes to you';
     public string $step_2_body          = 'Our tech arrives on time, diagnoses the problem, and gives you a clear upfront estimate before any work begins.';
     public string $step_3_title         = 'Fixed and guaranteed';
-    public string $step_3_body          = "We repair your appliance and back the work with a 90-day parts & labor warranty. If it's not right, we come back.";
+    public string $step_3_body          = "We repair your appliance and stand behind the work. If it's not right, we come back.";
 
     public string $services_title       = 'We Fix What You Rely On Every Day';
     public string $services_subtitle    = 'Our services';

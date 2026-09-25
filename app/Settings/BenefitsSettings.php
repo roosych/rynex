@@ -21,8 +21,8 @@ class BenefitsSettings extends Settings
     public string $b4_title = 'all major brands';
     public string $b4_desc  = 'We service Whirlpool, Samsung, LG, GE, Maytag, Bosch, KitchenAid, and more';
 
-    public string $b5_title = '90-day warranty';
-    public string $b5_desc  = 'All repairs come with a 90-day parts and labor guarantee. We stand behind our work';
+    public string $b5_title = 'oem-compatible parts';
+    public string $b5_desc  = 'We carry parts that match OEM specs, so repairs are done right the first time';
 
     public string $b6_title = 'in-home repair';
     public string $b6_desc  = 'We come to your home — no hauling appliances to a shop';

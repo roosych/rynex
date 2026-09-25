@@ -70,7 +70,7 @@
                                 <li>Same-Day Service Available</li>
                                 <li>Upfront Flat-Rate Pricing</li>
                                 <li>All Major Brands Serviced</li>
-                                <li>90-Day Repair Warranty</li>
+                                <li>OEM-Compatible Parts On Hand</li>
                                 <li>Respectful In-Home Service</li>
                             </ul>
                         </div>
