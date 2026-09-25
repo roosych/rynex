@@ -24,7 +24,7 @@
                         <div class="icon-box"><img src="/template/images/icon-phone.svg" alt=""></div>
                         <div class="footer-contact-content">
                             <h3>For more information</h3>
-                            <p><a href="tel:{{ $generalSettings->phone_primary }}">{{ $generalSettings->phone_primary }}</a></p>
+                            <p><a href="tel:{{ preg_replace('/[^\d+]/', '', $generalSettings->phone_primary) }}">{{ $generalSettings->phone_primary }}</a></p>
                         </div>
                     </div>
                     @endif
@@ -33,7 +33,7 @@
                         <div class="icon-box"><img src="/template/images/icon-headphone.svg" alt=""></div>
                         <div class="footer-contact-content">
                             <h3>Urgent service line</h3>
-                            <p><a href="tel:{{ $generalSettings->phone_secondary }}">{{ $generalSettings->phone_secondary }}</a></p>
+                            <p><a href="tel:{{ preg_replace('/[^\d+]/', '', $generalSettings->phone_secondary) }}">{{ $generalSettings->phone_secondary }}</a></p>
                         </div>
                     </div>
                     @endif

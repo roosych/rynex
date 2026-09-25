@@ -264,6 +264,11 @@
         </button>
     </div>
 </div>
+<script>
+if (typeof gtag === 'function') {
+    gtag('event', 'generate_lead', { form_id: 'appointmentForm' });
+}
+</script>
 @endif
 
 @push('scripts')

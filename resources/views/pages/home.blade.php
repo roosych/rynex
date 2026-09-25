@@ -90,7 +90,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                             </div>
                             <div class="hero-cta-item-content">
                                 <p><a href="mailto:{{ $generalSettings->email }}"><span>Email:</span> {{ $generalSettings->email }}</a></p>
-                                <p><a href="tel:{{ $generalSettings->phone_primary }}"><span>Phone:</span> {{ $generalSettings->phone_primary }}</a></p>
+                                <p><a href="tel:{{ preg_replace('/[^\d+]/', '', $generalSettings->phone_primary) }}"><span>Phone:</span> {{ $generalSettings->phone_primary }}</a></p>
                             </div>
                         </div>
                         <div class="hero-cta-item wow fadeInUp" data-wow-delay="0.2s">
@@ -364,7 +364,7 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                             <div class="how-work-contact-box">
                                 <div class="icon-box"><img src="/template/images/icon-phone.svg" alt=""></div>
                                 <div class="how-work-contact-content">
-                                    <h3><a href="tel:{{ $generalSettings->phone_primary }}">{{ $generalSettings->phone_primary }}</a></h3>
+                                    <h3><a href="tel:{{ preg_replace('/[^\d+]/', '', $generalSettings->phone_primary) }}">{{ $generalSettings->phone_primary }}</a></h3>
                                 </div>
                             </div>
                         </div>
@@ -572,8 +572,8 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                             <div class="booking-contact-item wow fadeInUp" data-wow-delay="0.2s">
                                 <div class="icon-box"><img src="/template/images/icon-phone-white.svg" alt=""></div>
                                 <div class="booking-contact-content">
-                                    <p><a href="tel:{{ $generalSettings->phone_primary }}">{{ $generalSettings->phone_primary }}</a></p>
-                                    <p><a href="tel:{{ $generalSettings->phone_secondary }}">{{ $generalSettings->phone_secondary }}</a></p>
+                                    <p><a href="tel:{{ preg_replace('/[^\d+]/', '', $generalSettings->phone_primary) }}">{{ $generalSettings->phone_primary }}</a></p>
+                                    <p><a href="tel:{{ preg_replace('/[^\d+]/', '', $generalSettings->phone_secondary) }}">{{ $generalSettings->phone_secondary }}</a></p>
                                 </div>
                             </div>
                         </div>

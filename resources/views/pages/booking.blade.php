@@ -18,8 +18,8 @@
                         <div class="icon-box"><img src="/template/images/icon-phone.svg" alt=""></div>
                         <div class="contact-info-content">
                             <h3>phone</h3>
-                            <p><a href="tel:{{ $generalSettings->phone_primary }}">{{ $generalSettings->phone_primary }}</a></p>
-                            <p><a href="tel:{{ $generalSettings->phone_secondary }}">{{ $generalSettings->phone_secondary }}</a></p>
+                            <p><a href="tel:{{ preg_replace('/[^\d+]/', '', $generalSettings->phone_primary) }}">{{ $generalSettings->phone_primary }}</a></p>
+                            <p><a href="tel:{{ preg_replace('/[^\d+]/', '', $generalSettings->phone_secondary) }}">{{ $generalSettings->phone_secondary }}</a></p>
                         </div>
                     </div>
                 </div>
