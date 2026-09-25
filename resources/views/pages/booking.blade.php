@@ -19,7 +19,9 @@
                         <div class="contact-info-content">
                             <h3>phone</h3>
                             <p><a href="tel:{{ preg_replace('/[^\d+]/', '', $generalSettings->phone_primary) }}">{{ $generalSettings->phone_primary }}</a></p>
+                            @if (filled($generalSettings->phone_secondary))
                             <p><a href="tel:{{ preg_replace('/[^\d+]/', '', $generalSettings->phone_secondary) }}">{{ $generalSettings->phone_secondary }}</a></p>
+                            @endif
                         </div>
                     </div>
                 </div>

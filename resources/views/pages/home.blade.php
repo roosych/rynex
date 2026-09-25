@@ -573,7 +573,9 @@ $faqSchema = \Spatie\SchemaOrg\Schema::fAQPage()->mainEntity(
                                 <div class="icon-box"><img src="/template/images/icon-phone-white.svg" alt=""></div>
                                 <div class="booking-contact-content">
                                     <p><a href="tel:{{ preg_replace('/[^\d+]/', '', $generalSettings->phone_primary) }}">{{ $generalSettings->phone_primary }}</a></p>
+                                    @if (filled($generalSettings->phone_secondary))
                                     <p><a href="tel:{{ preg_replace('/[^\d+]/', '', $generalSettings->phone_secondary) }}">{{ $generalSettings->phone_secondary }}</a></p>
+                                    @endif
                                 </div>
                             </div>
                         </div>
