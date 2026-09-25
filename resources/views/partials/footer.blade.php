@@ -62,6 +62,7 @@
                         <li><a href="{{ route('about') }}">About us</a></li>
                         <li><a href="{{ route('services.index') }}">Our services</a></li>
                         <li><a href="{{ route('blog.index') }}">Blog</a></li>
+                        <li><a href="{{ route('privacy') }}">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>

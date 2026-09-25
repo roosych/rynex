@@ -7,6 +7,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ServiceController as AdminServiceController;
@@ -31,6 +32,8 @@ Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 Route::get('/book-service', [BookingController::class, 'index'])->name('booking');
 Route::post('/book-service', [BookingController::class, 'store'])->name('booking.store');
+
+Route::get('/privacy-policy', [PrivacyPolicyController::class, 'index'])->name('privacy');
 
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
